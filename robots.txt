@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ia-gence.com/sitemap.xml
