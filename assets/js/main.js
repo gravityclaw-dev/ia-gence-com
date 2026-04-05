@@ -25,24 +25,25 @@ function updateCalc(){
   document.getElementById(id).addEventListener('input',updateCalc));
 updateCalc();
 
-/* ── EMAIL CAPTURE ── */
+/* ── EMAIL CAPTURE — Redirection vers Cal.com ── */
 function submitCalcEmail(){
   const email=document.getElementById('calc-email').value.trim();
   if(!email||!email.includes('@')){
     document.getElementById('calc-email').style.borderColor='var(--red)';
     return;
   }
-  // Envoyer vers Google Sheets
-  const perte=document.getElementById('total-display').textContent;
-  const nb=document.getElementById('nb-slider').value;
-  const heures=document.getElementById('h-slider').value;
-  const taux=document.getElementById('taux-slider').value;
-  submitLead(email,perte,nb,heures,taux);
-
-  // UI: montrer confirmation
+  // UI: montrer confirmation + ouvrir Cal.com
   document.getElementById('calc-capture-form').style.display='none';
   document.getElementById('calc-thanks').style.display='block';
-  if(window.Cal) Cal("ui",{"styles":{"branding":{"brandColor":"#FF5C00"}}});
+  // Ouvrir le calendrier Cal.com
+  if(window.Cal && Cal.ns && Cal.ns["diagnostic-15-min"]) {
+    Cal.ns["diagnostic-15-min"]("floatingButton", {
+      "calLink": "pierre-andrieux-iagence/diagnostic-15-min",
+      "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "auto" },
+      "hideButtonIcon": true,
+      "buttonText": "Diagnostic stratégique — 15 min"
+    });
+  }
 }
 
 /* ── AXES TABS ── */
