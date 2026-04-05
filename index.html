@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IAgence — Agents IA pour distributeurs industriels B2B | Essonne & Yvelines</title>
-<meta name="description" content="Agents IA autonomes deployes sur votre machine Windows en 12 jours. Vos conseillers arretent de chercher des references et passent leur journee a vendre. Garantie ROI 6 mois. Essonne/Yvelines.">
+<meta name="description" content="Agents IA autonomes déployés sur votre machine Windows en 12 jours. Vos conseillers arrêtent de chercher des références et passent leur journée à vendre. Garantie ROI 6 mois. Essonne/Yvelines.">
 <link rel="canonical" href="https://ia-gence.com/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
@@ -14,11 +14,13 @@
 <meta property="og:image" content="https://ia-gence.com/assets/img/og-image.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/img/logo-mini.webp" type="image/webp">
 <link rel="apple-touch-icon" href="/assets/img/logo-mini.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/logo-full.webp" type="image/webp">
 
 <style>
 :root{--orange:#FF5C00;--orange-dim:rgba(255,92,0,0.07);--orange-glow:rgba(255,92,0,0.22);--red:#D90012;--red-dim:rgba(217,0,18,0.08);--navy:#1A2B42;--navy-mid:#243650;--green:#00FF66;--bg:#FCFCFC;--bg-off:#F8F9FA;--text:#131313;--text-muted:#666666;--text-dim:#9E9E9E;--border:#EAEAEA;--white:#FFFFFF;--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
@@ -26,7 +28,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
 .container{max-width:1100px;margin:0 auto;padding:0 32px}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;display:flex;justify-content:space-between;align-items:center;background:rgba(252,252,252,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;display:flex;justify-content:space-between;align-items:center;background:rgba(248,248,246,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
 .ticker-wrap{background:var(--navy);overflow:hidden;padding:11px 0;margin-top:64px}
 #hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1fr 400px;background:var(--white);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
 </style>
@@ -38,9 +40,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "IAgence",
-  "description": "Agents IA autonomes pour distributeurs industriels B2B - deployes sur votre machine Windows en 12 jours",
+  "description": "Agents IA autonomes pour distributeurs industriels B2B - déployés sur votre machine Windows en 12 jours",
   "url": "https://ia-gence.com",
   "image": "https://ia-gence.com/assets/img/logo-full.webp",
+  "priceRange": "€€",
+  "openingHours": "Mo-Fr 09:00-18:00",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "Essonne / Yvelines",
@@ -56,7 +60,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     "jobTitle": "CEO & Lead Architect"
   },
   "knowsAbout": ["Intelligence Artificielle", "Automatisation PME", "Distribution industrielle B2B"],
-  "serviceType": ["Agents IA", "Automatisation devis", "Traitement SAV automatise"]
+  "serviceType": ["Agents IA", "Automatisation devis", "Traitement SAV automatisé"]
 }
 </script>
 </head>
@@ -79,7 +83,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
      MOBILE NAV
 ═══════════════════════════════════════ -->
 <div class="mobile-nav" id="mobile-nav">
-  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
   <div class="mobile-nav-links">
     <a href="#calculateur" class="mobile-nav-link" onclick="closeMobileNav()">Calculateur</a>
     <a href="#axes" class="mobile-nav-link" onclick="closeMobileNav()">Solutions</a>
@@ -88,10 +92,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     <a href="#methodo" class="mobile-nav-link" onclick="closeMobileNav()">Méthode</a>
   </div>
   <div class="mobile-nav-cta">
-    <!-- REMPLACER par votre lien Cal.com -->
-    <button class="btn-primary" style="width:100%;display:block;text-align:center"
-      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
-      data-cal-config='{"layout":"month_view"}'>
+    <button class="btn-primary" style="width:100%;display:block;text-align:center">
       Parler 15 min →
     </button>
   </div>
@@ -109,10 +110,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     <a href="#axes" class="nav-link">Solutions</a>
     <a href="#temoignages" class="nav-link">Résultats</a>
     <a href="#methodo" class="nav-link">Méthode</a>
-    <!-- REMPLACER par votre lien Cal.com -->
-    <button class="nav-cta"
-      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
-      data-cal-config='{"layout":"month_view"}'>
+    <button class="nav-cta">
       <div class="nav-cta-dot"></div>
       Parler 15 min
     </button>
@@ -139,6 +137,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     <span class="ticker-item">Conditionnement Wissous — <span class="hi">marge nette record</span></span>
     <span class="ticker-item">SAV réduit de <span class="hi">73%</span> sur le temps de traitement</span>
     <span class="ticker-item">Zéro employé licencié — <span class="hi">100% puissance de vente récupérée</span></span>
+    <span class="ticker-item">Négoce technique Massy — <span class="hi">devis catalogue en 30 sec</span></span>
+    <span class="ticker-item">Distribution EPI Les Ulis — <span class="hi">0 ressaisie ERP</span></span>
   </div>
 </div>
 
@@ -197,9 +197,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
       Pour une équipe de 6 conseillers, 2h de tâches non-commerciales par jour à 35€/h chargé.<br>
       <strong style="color:rgba(255,255,255,0.6)">Ajustez le calculateur pour voir vos chiffres réels →</strong>
     </div>
-    <button class="hero-right-cta"
-      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
-      data-cal-config='{"layout":"month_view"}'>
+    <button class="hero-right-cta">
       Stopper cette hémorragie — 15 min →
     </button>
     <div class="hero-right-sub">Sans engagement // Fondateur IAgence // 91/78</div>
@@ -236,7 +234,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
           <div class="calc-input-row">
             <div class="calc-val" id="nb-display">6</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="nb-slider" min="1" max="20" value="6">
+              <input type="range" id="nb-slider" min="1" max="20" value="6" aria-label="Nombre de conseillers">
               <div class="calc-hint">Toute personne qui cherche des infos ou gère de l'administratif</div>
             </div>
           </div>
@@ -247,7 +245,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
           <div class="calc-input-row">
             <div class="calc-val" id="h-display">2h</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="h-slider" min="1" max="6" value="2" step="0.5">
+              <input type="range" id="h-slider" min="1" max="6" value="2" step="0.5" aria-label="Heures perdues par jour">
               <div class="calc-hint">Recherche catalogue, ressaisie ERP, tri mails, relances manuelles</div>
             </div>
           </div>
@@ -258,7 +256,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
           <div class="calc-input-row">
             <div class="calc-val" id="taux-display">35€</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="taux-slider" min="28" max="55" value="35" step="1">
+              <input type="range" id="taux-slider" min="28" max="55" value="35" step="1" aria-label="Coût horaire chargé">
               <div class="calc-hint">Base chargée — inclut cotisations, mutuelle, espace de travail</div>
             </div>
           </div>
@@ -304,9 +302,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
         <div class="calc-thanks" id="calc-thanks">
           <div class="calc-thanks-icon">✓</div>
           <div class="calc-thanks-text">Rapport envoyé. Passons à l'action.</div>
-          <button class="calc-thanks-cta"
-            data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
-            data-cal-config='{"layout":"month_view"}'>
+          <button class="calc-thanks-cta">
             📅 Bloquer un créneau — Jeudi ou vendredi ?
           </button>
           <div class="calc-cta-sub" style="margin-top:10px">15 MIN // FONDATEUR // 91/78 // SANS ENGAGEMENT</div>
@@ -603,7 +599,43 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   </div>
 </section>
 
-<!-- Cal.com floating button — fourni par le script Cal.com officiel dans main.js -->
+<!-- ═══════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-left">
+        <div class="bg-grid-warped"></div>
+        <div class="textural-overlay"></div>
+        <div class="cta-left-inner">
+          <div class="sys" style="--orange:rgba(255,255,255,0.35)">
+            <span style="width:28px;height:1px;background:rgba(255,255,255,0.2);display:inline-block"></span>
+            Première étape
+          </div>
+          <h2 class="cta-h2" style="margin-top:16px">
+            Vos conseillers<br>passent leur journée<br><span>à vendre.</span>
+          </h2>
+          <p class="cta-text">
+            15 minutes avec le fondateur — on chiffre ce que vous perdez, on regarde si votre équipe peut absorber plus de volume, et on décide ensemble de la suite.<br><br>
+            On sélectionne nos clients. Si votre goulot d'étranglement n'est pas dans l'administratif, on vous le dit directement.
+          </p>
+        </div>
+      </div>
+      <div class="cta-right">
+        <div class="cta-card-title">Choisissez un créneau</div>
+        <div class="cta-card-sub">15 min montre en main avec Pierre, fondateur IAgence.<br><strong>Essonne / Yvelines — appel ou déplacement possible.</strong></div>
+
+        <!-- Cal.com inline embed -->
+        <div style="margin-bottom:20px" data-cal-inline="pierre-andrieux-iagence/diagnostic-15-min"
+          data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
+
+        <!-- Fallback button -->
+        <button class="btn-book"
+          data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
+          data-cal-config='{"layout":"month_view"}'>
+          📅 Bloquer un créneau →
+        </button>
 
         <div class="cta-reassurance">
           <div class="cta-reassurance-item">Sans engagement — 15 minutes, pas plus</div>

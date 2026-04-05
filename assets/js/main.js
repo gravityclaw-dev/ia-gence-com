@@ -25,25 +25,18 @@ function updateCalc(){
   document.getElementById(id).addEventListener('input',updateCalc));
 updateCalc();
 
-/* ── EMAIL CAPTURE — Redirection vers Cal.com ── */
+/* ── EMAIL CAPTURE → Cal.com redirect ── */
 function submitCalcEmail(){
   const email=document.getElementById('calc-email').value.trim();
   if(!email||!email.includes('@')){
     document.getElementById('calc-email').style.borderColor='var(--red)';
     return;
   }
-  // UI: montrer confirmation + ouvrir Cal.com
+  // Show confirmation and trigger Cal.com
   document.getElementById('calc-capture-form').style.display='none';
   document.getElementById('calc-thanks').style.display='block';
-  // Ouvrir le calendrier Cal.com
-  if(window.Cal && Cal.ns && Cal.ns["diagnostic-15-min"]) {
-    Cal.ns["diagnostic-15-min"]("floatingButton", {
-      "calLink": "pierre-andrieux-iagence/diagnostic-15-min",
-      "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "auto" },
-      "hideButtonIcon": true,
-      "buttonText": "Diagnostic stratégique — 15 min"
-    });
-  }
+  // Trigger Cal.com floating button
+  if(typeof loadCal === 'function') loadCal();
 }
 
 /* ── AXES TABS ── */
@@ -60,10 +53,6 @@ document.querySelectorAll('.axes-tab').forEach(tab=>{
 window.addEventListener('scroll',()=>{
   const nav=document.getElementById('main-nav');
   nav.classList.toggle('scrolled',window.scrollY>40);
-  // Masquer popup trigger si en bas de page
-  const trig=document.getElementById('popup-trigger');
-  const nearBottom=(window.innerHeight+window.scrollY)>=(document.body.offsetHeight-200);
-  if(nearBottom) trig.classList.add('hidden');
 });
 
 /* ── MOBILE NAV ── */
@@ -77,39 +66,50 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 revealEls.forEach(el=>observer.observe(el));
 
-/* ── CAL.COM OFFICIEL — Floating Button + Inline Embed ── */
-(function(C, A, L) {
-  let p = function(a, ar) { a.q.push(ar); };
-  let d = C.document;
-  C.Cal = C.Cal || function() {
-    let cal = C.Cal;
-    let ar = arguments;
-    if (!cal.loaded) {
-      cal.ns = {};
-      cal.q = cal.q || [];
-      d.head.appendChild(d.createElement("script")).src = A;
-      cal.loaded = true;
-    }
-    if (ar[0] === L) {
-      const api = function() { p(api, arguments); };
-      const namespace = ar[1];
-      api.q = api.q || [];
-      if (typeof namespace === "string") {
-        cal.ns[namespace] = cal.ns[namespace] || api;
-        p(cal.ns[namespace], ar);
-        p(cal, ["initNamespace", namespace]);
-      } else p(cal, ar);
-      return;
-    }
-    p(cal, ar);
-  };
-})(window, "https://app.cal.com/embed/embed.js", "init");
+/* ── CAL.COM OFFICIEL — Lazy Load ── */
+let calLoaded = false;
+function loadCal() {
+  if (calLoaded) return;
+  calLoaded = true;
+  (function(C, A, L) {
+    let p = function(a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function() {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function() { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ["initNamespace", namespace]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
 
-Cal("init", "diagnostic-15-min", { origin: "https://app.cal.com" });
-Cal.ns["diagnostic-15-min"]("floatingButton", {
-  "calLink": "pierre-andrieux-iagence/diagnostic-15-min",
-  "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "auto" },
-  "hideButtonIcon": true,
-  "buttonText": "Diagnostic stratégique — 15 min"
+  Cal("init", "diagnostic-15-min", { origin: "https://app.cal.com" });
+  Cal.ns["diagnostic-15-min"]("floatingButton", {
+    "calLink": "pierre-andrieux-iagence/diagnostic-15-min",
+    "config": { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "auto" },
+    "hideButtonIcon": true,
+    "buttonText": "Diagnostic stratégique — 15 min"
+  });
+  Cal.ns["diagnostic-15-min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+}
+
+// Load Cal.com on first interaction or after 3s
+let calTimer = setTimeout(loadCal, 3000);
+['click', 'touchstart', 'scroll'].forEach(evt => {
+  document.addEventListener(evt, () => { loadCal(); clearTimeout(calTimer); }, { once: true });
 });
-Cal.ns["diagnostic-15-min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
