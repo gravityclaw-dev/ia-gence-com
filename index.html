@@ -90,7 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   <div class="mobile-nav-cta">
     <!-- REMPLACER par votre lien Cal.com -->
     <button class="btn-primary" style="width:100%;display:block;text-align:center"
-      data-cal-link="pierre-andrieux/diagnostic-15min"
+      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
       data-cal-config='{"layout":"month_view"}'>
       Parler 15 min →
     </button>
@@ -111,7 +111,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     <a href="#methodo" class="nav-link">Méthode</a>
     <!-- REMPLACER par votre lien Cal.com -->
     <button class="nav-cta"
-      data-cal-link="pierre-andrieux/diagnostic-15min"
+      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
       data-cal-config='{"layout":"month_view"}'>
       <div class="nav-cta-dot"></div>
       Parler 15 min
@@ -198,7 +198,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
       <strong style="color:rgba(255,255,255,0.6)">Ajustez le calculateur pour voir vos chiffres réels →</strong>
     </div>
     <button class="hero-right-cta"
-      data-cal-link="pierre-andrieux/diagnostic-15min"
+      data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
       data-cal-config='{"layout":"month_view"}'>
       Stopper cette hémorragie — 15 min →
     </button>
@@ -305,7 +305,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
           <div class="calc-thanks-icon">✓</div>
           <div class="calc-thanks-text">Rapport envoyé. Passons à l'action.</div>
           <button class="calc-thanks-cta"
-            data-cal-link="pierre-andrieux/diagnostic-15min"
+            data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
             data-cal-config='{"layout":"month_view"}'>
             📅 Bloquer un créneau — Jeudi ou vendredi ?
           </button>
@@ -603,43 +603,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     CTA FINAL — avec Cal.com embed
-═══════════════════════════════════════ -->
-<section id="cta-final">
-  <div class="container">
-    <div class="cta-box reveal">
-      <div class="cta-left">
-        <div class="bg-grid-warped"></div>
-        <div class="textural-overlay"></div>
-        <div class="cta-left-inner">
-          <div class="sys" style="--orange:rgba(255,255,255,0.35)">
-            <span style="width:28px;height:1px;background:rgba(255,255,255,0.2);display:inline-block"></span>
-            Première étape
-          </div>
-          <h2 class="cta-h2" style="margin-top:16px">
-            Vos conseillers<br>passent leur journée<br><span>à vendre.</span>
-          </h2>
-          <p class="cta-text">
-            15 minutes avec le fondateur — on chiffre ce que vous perdez, on regarde si votre équipe peut absorber plus de volume, et on décide ensemble de la suite.<br><br>
-            On sélectionne nos clients. Si votre goulot d'étranglement n'est pas dans l'administratif, on vous le dit directement.
-          </p>
-        </div>
-      </div>
-      <div class="cta-right">
-        <div class="cta-card-title">Choisissez un créneau</div>
-        <div class="cta-card-sub">15 min montre en main avec Pierre, fondateur IAgence.<br><strong>Essonne / Yvelines — appel ou déplacement possible.</strong></div>
-
-        <!-- Cal.com inline embed — se remplace automatiquement -->
-        <div style="margin-bottom:20px" data-cal-inline="pierre-andrieux/diagnostic-15min"
-          data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
-
-        <!-- Fallback button si embed ne charge pas -->
-        <button class="btn-book"
-          data-cal-link="pierre-andrieux/diagnostic-15min"
-          data-cal-config='{"layout":"month_view"}'>
-          📅 Bloquer un créneau →
-        </button>
+<!-- Cal.com floating button — fourni par le script Cal.com officiel dans main.js -->
 
         <div class="cta-reassurance">
           <div class="cta-reassurance-item">Sans engagement — 15 minutes, pas plus</div>
@@ -670,188 +634,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════
-     POPUP FLOTTANT
-═══════════════════════════════════════ -->
-<div id="popup-rdv" class="hidden">
-  <div class="popup-header">
-    <div class="popup-avatar">
-      <img src="assets/img/pierre.webp" alt="Pierre Andrieux">
-    </div>
-    <div>
-      <div class="popup-name">Pierre Andrieux</div>
-      <div class="popup-role">CEO @IAgence</div>
-    </div>
-    <button class="popup-close" onclick="closePopup()" aria-label="Fermer">&times;</button>
-  </div>
-  <div class="popup-body">
-    <div class="popup-tagline">Vous souhaitez stopper l'hemorragie administrative ?</div>
-    <div class="popup-sub">15 min pour chiffrer votre perte reelle et voir si on peut la stopper ensemble.</div>
-
-    <!-- Barre urgence + timer -->
-    <div class="popup-urgency">
-      <div class="popup-urgency-bar">
-        <div class="popup-urgency-fill" id="popup-urgency-fill"></div>
-      </div>
-      <div class="popup-urgency-row">
-        <span class="popup-urgency-text">Il ne reste plus que quelques creneaux.</span>
-        <span class="popup-urgency-timer" id="popup-timer">02:59</span>
-      </div>
-    </div>
-
-    <!-- Jours dynamiques -->
-    <div class="popup-days" id="popup-days-container"></div>
-
-    <button class="btn-popup-book"
-      data-cal-link="pierre-andrieux/diagnostic-15min"
-      data-cal-config='{"layout":"month_view"}'>
-      Bloquer un creneau
-    </button>
-    <a href="#axes" class="btn-popup-secondary" onclick="closePopup()">Decouvrir les solutions</a>
-    <div class="popup-powered">Powered by IAgence</div>
-  </div>
-</div>
-
-<button id="popup-trigger" onclick="openPopup()">
-  <div class="trigger-dot"></div>
-  Prendre RDV — 15 min
-</button>
-
-<!-- ═══════════════════════════════════════
-     SCRIPTS
-═══════════════════════════════════════ -->
-<script>
-/* ── CALCULATEUR ── */
-function fmt(n){return new Intl.NumberFormat('fr-FR').format(Math.round(n))+' €'}
-function updateCalc(){
-  const nb=parseFloat(document.getElementById('nb-slider').value);
-  const h=parseFloat(document.getElementById('h-slider').value);
-  const taux=parseFloat(document.getElementById('taux-slider').value);
-  const total=nb*h*taux*5*48;
-  const heures=nb*h*5*48;
-  document.getElementById('nb-display').textContent=nb;
-  document.getElementById('h-display').textContent=h+'h';
-  document.getElementById('taux-display').textContent=taux+'€';
-  document.getElementById('total-display').textContent=fmt(total);
-  document.getElementById('bd-heures').textContent=new Intl.NumberFormat('fr-FR').format(heures)+' h';
-  document.getElementById('bd-taux').textContent=taux+' €/h';
-  document.getElementById('bd-ca').textContent='+'+fmt(total*0.5);
-  document.getElementById('perte-span').textContent=fmt(total);
-  // Sync hero panel
-  const heroLoss=document.getElementById('hero-loss');
-  if(heroLoss) heroLoss.textContent=fmt(total);
-}
-['nb-slider','h-slider','taux-slider'].forEach(id=>
-  document.getElementById(id).addEventListener('input',updateCalc));
-updateCalc();
-
-/* ── EMAIL CAPTURE ── */
-function submitCalcEmail(){
-  const email=document.getElementById('calc-email').value.trim();
-  if(!email||!email.includes('@')){
-    document.getElementById('calc-email').style.borderColor='var(--red)';
-    return;
-  }
-  // ICI: envoyer l'email à votre CRM/webhook
-  // fetch('/api/lead', {method:'POST', body: JSON.stringify({email, perte: document.getElementById('total-display').textContent})})
-  console.log('Lead capturé:', email);
-  document.getElementById('calc-capture-form').style.display='none';
-  document.getElementById('calc-thanks').style.display='block';
-  // Ré-initialise Cal.com sur le bouton nouvellement visible
-  if(window.Cal) Cal("ui",{"styles":{"branding":{"brandColor":"#FF5C00"}}});
-}
-
-/* ── AXES TABS ── */
-document.querySelectorAll('.axes-tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.axes-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.axes-panel').forEach(p=>p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
-  });
-});
-
-/* ── NAVIGATION SCROLL ── */
-window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('main-nav');
-  nav.classList.toggle('scrolled',window.scrollY>40);
-  // Masquer popup trigger si en bas de page
-  const trig=document.getElementById('popup-trigger');
-  const nearBottom=(window.innerHeight+window.scrollY)>=(document.body.offsetHeight-200);
-  if(nearBottom) trig.classList.add('hidden');
-});
-
-/* ── MOBILE NAV ── */
-function openMobileNav(){document.getElementById('mobile-nav').classList.add('open')}
-function closeMobileNav(){document.getElementById('mobile-nav').classList.remove('open')}
-
-/* ── POPUP FLOTTANT ── */
-// Générer les jours dynamiquement
-function buildDynamicDays(){
-  const container=document.getElementById('popup-days-container');
-  const days=['Dim.','Lun.','Mar.','Mer.','Jeu.','Ven.','Sam.'];
-  const jours=[];
-  const now=new Date();
-  let count=0,i=1;
-  while(count<5){
-    const d=new Date(now);d.setDate(now.getDate()+i);
-    const dow=d.getDay();
-    if(dow!==0){// exclure dimanche (0)
-      jours.push({abbr:days[dow],num:d.getDate()});count++;
-    }
-    i++;
-  }
-  container.innerHTML=jours.map((j,idx)=>`
-    <div class="popup-day ${idx===0?'active':''}" onclick="selectPopupDay(this)">
-      <span class="p-day-abbr">${j.abbr}</span>
-      <span class="p-day-num">${j.num}</span>
-    </div>
-  `).join('');
-}
-buildDynamicDays();
-
-let popupClosed=false;
-function openPopup(){
-  document.getElementById('popup-rdv').classList.remove('hidden');
-  document.getElementById('popup-trigger').classList.add('hidden');
-}
-function closePopup(){
-  document.getElementById('popup-rdv').classList.add('hidden');
-  document.getElementById('popup-trigger').classList.remove('hidden');
-  popupClosed=true;
-}
-function selectPopupDay(el){
-  document.querySelectorAll('.popup-day').forEach(d=>d.classList.remove('active'));
-  el.classList.add('active');
-}
-
-// Popup auto - desktop only (no auto-open on mobile)
-const isMobile = window.innerWidth < 900;
-
-if (!isMobile) {
-  let popupTimer = setTimeout(() => {
-    if (!popupClosed && document.getElementById('popup-trigger').style.display !== 'none') {
-      openPopup();
-    }
-  }, 35000);
-
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrolled > 0.7 && !popupClosed) {
-      clearTimeout(popupTimer);
-      openPopup();
-      popupClosed = true;
-    }
-  }, { passive: true });
-}
-
-/* ── SCROLL REVEAL ── */
-const revealEls=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-revealEls.forEach(el=>observer.observe(el));
-</script>
+<!-- Cal.com floating button — fourni par le script Cal.com officiel dans main.js -->
 
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/sheets.js" defer></script>
