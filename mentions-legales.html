@@ -5,60 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentions légales — IAgence</title>
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
-<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
-<link rel="icon" href="/assets/img/logo-mini.webp" type="image/webp">
+  <link rel="icon" href="/assets/img/logo-mini.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<style>
-:root{--orange:#FF5C00;--orange-dim:rgba(255,92,0,0.07);--orange-glow:rgba(255,92,0,0.22);--red:#D90012;--red-dim:rgba(217,0,18,0.08);--navy:#1A2B42;--navy-mid:#243650;--green:#00FF66;--bg:#FCFCFC;--bg-off:#F8F9FA;--text:#131313;--text-muted:#666666;--text-dim:#9E9E9E;--border:#EAEAEA;--white:#FFFFFF;--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
-.container{max-width:1100px;margin:0 auto;padding:0 32px}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;display:flex;justify-content:space-between;align-items:center;background:rgba(248,248,246,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo img{height:32px;width:auto}
-.nav-link{font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;padding:8px 14px;transition:color 0.2s}
-.nav-link:hover{color:var(--orange)}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/design-tokens.css">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neutral-0);line-height:1.625;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 32px}
+    @media(max-width:768px){.container{padding:0 20px}}
+    @media(max-width:480px){.container{padding:0 16px}}
+
+    /* Nav */
+    .top-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.65);backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);border-bottom:1px solid rgba(0,0,0,0.06);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav-logo img{height:28px;width:auto}
+    .nav-back{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--neutral-500);text-decoration:none;padding:var(--space-2) var(--space-4);border-radius:var(--radius-sm);transition:all 150ms var(--ease-out);border:1px solid var(--neutral-200)}
+    .nav-back:hover{color:var(--orange-500);border-color:var(--orange-200);background:var(--orange-50)}
+
+    /* Content */
+    .legal-content{max-width:720px;margin:0 auto;padding:120px 32px 80px}
+    @media(max-width:768px){.legal-content{padding:100px 20px 60px}}
+    .legal-content h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.04em;margin-bottom:var(--space-8);color:var(--neutral-900)}
+    .legal-content h2{font-family:var(--font-display);font-weight:700;font-size:1.25rem;margin:var(--space-8) 0 var(--space-3);color:var(--neutral-900);letter-spacing:-0.02em}
+    .legal-content p{font-size:0.95rem;color:var(--neutral-600);line-height:1.7;margin-bottom:var(--space-3)}
+    .legal-content p strong{color:var(--neutral-800)}
+
+    /* Footer */
+    .page-footer{background:var(--navy-900);padding:var(--space-8) 0;border-top:1px solid rgba(255,255,255,0.05)}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4)}
+    .footer-logo img{height:24px;width:auto}
+    .footer-info{font-size:0.8rem;color:var(--navy-400)}
+    .footer-info a{color:var(--navy-300)}
+    .footer-status{display:flex;align-items:center;gap:var(--space-2)}
+    .status-dot{width:6px;height:6px;border-radius:50%;background:var(--success);animation:pulse 2s ease-in-out infinite}
+    .status-text{font-family:var(--font-mono);font-size:10px;color:var(--navy-400);letter-spacing:0.04em}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+  </style>
 </head>
 <body>
-  <nav id="main-nav">
+  <header class="top-nav">
     <a href="/" class="nav-logo">
-      <img src="assets/img/logo-full.webp" alt="IAgence" height="32" width="120">
+      <img src="assets/img/logo-full.webp" alt="IAgence" height="28" width="105">
     </a>
-    <a href="/" class="nav-link" style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none">← Retour au site</a>
-  </nav>
-  <main class="container" style="padding-top:120px;padding-bottom:80px;max-width:720px">
-    <h1 style="font-family:var(--font-display);font-weight:800;font-size:36px;margin-bottom:32px">Mentions légales</h1>
+    <a href="/" class="nav-back">← Retour au site</a>
+  </header>
 
-    <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:28px 0 12px">Éditeur du site</h2>
-    <p>IAgence — Pierre Andrieux<br>
+  <main class="legal-content">
+    <h1>Mentions légales</h1>
+
+    <h2>Éditeur du site</h2>
+    <p><strong>IAgence</strong> — Pierre Andrieux<br>
     Essonne / Yvelines (91/78), France<br>
     Contact : pierre@ia-gence.com<br>
     SIRET : [A COMPLETER]</p>
 
-    <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:28px 0 12px">Hébergement</h2>
+    <h2>Hébergement</h2>
     <p>Cloudflare, Inc.<br>101 Townsend St, San Francisco, CA 94107, USA</p>
 
-    <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:28px 0 12px">Données personnelles (RGPD)</h2>
+    <h2>Données personnelles (RGPD)</h2>
     <p>Les données collectées sont gérées exclusivement via Cal.com (prise de rendez-vous). Cal.com est conforme au RGPD. Aucune donnée n'est stockée sur nos serveurs.</p>
     <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit, contactez : pierre@ia-gence.com</p>
 
-    <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:28px 0 12px">Cookies</h2>
+    <h2>Cookies</h2>
     <p>Ce site n'utilise pas de cookies de tracking. Le service Cal.com (prise de rendez-vous) peut déposer des cookies techniques nécessaires à son fonctionnement.</p>
 
-    <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;margin:28px 0 12px">Propriété intellectuelle</h2>
+    <h2>Propriété intellectuelle</h2>
     <p>L'ensemble du contenu de ce site (textes, images, logo) est la propriété exclusive d'IAgence. Toute reproduction sans autorisation est interdite.</p>
   </main>
-  <footer style="border-top:1px solid var(--border);padding:28px 0">
+
+  <footer class="page-footer">
     <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-family:var(--font-display);font-weight:800;font-size:17px;color:var(--orange)">IAgence</span>
-        <span style="font-family:var(--font-mono);font-size:12px;color:var(--text-dim)">© 2025 IAgence · ia-gence.com</span>
+      <div class="footer-inner">
+        <a href="/" class="footer-logo">
+          <img src="assets/img/logo-full.webp" alt="IAgence" height="24" width="90">
+        </a>
+        <div class="footer-info">© 2026 IAgence · ia-gence.com · <a href="mentions-legales.html" style="color:inherit;text-decoration:underline">Mentions légales</a></div>
+        <div class="footer-status">
+          <div class="status-dot"></div>
+          <span class="status-text">System Nominal // All Nodes Operational</span>
+        </div>
       </div>
     </div>
   </footer>

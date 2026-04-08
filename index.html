@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAgence — Agents IA pour distributeurs industriels B2B | Essonne & Yvelines</title>
-<meta name="description" content="Agents IA autonomes déployés sur votre machine Windows en 12 jours. Vos conseillers arrêtent de chercher des références et passent leur journée à vendre. Garantie ROI 6 mois. Essonne/Yvelines.">
+<title>IAgence — Agents IA pour distributeurs industriels B2B</title>
+<meta name="description" content="Agents IA déployés sur votre machine Windows en 12 jours. Vos conseillers arrêtent de chercher des références et passent leur journée à vendre. Garantie ROI 6 mois.">
 <link rel="canonical" href="https://ia-gence.com/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ia-gence.com/">
-<meta property="og:title" content="IAgence — Arretez de perdre des marches sur les delais.">
-<meta property="og:description" content="Agents IA autonomes pour distributeurs industriels B2B. Deployes sur votre machine Windows en 12 jours. Zero cloud. Garantie ROI 6 mois.">
+<meta property="og:title" content="IAgence — Vos conseillers cherchent au lieu de vendre. On corrige ça.">
+<meta property="og:description" content="Agents IA sur votre machine Windows. 12 jours. Zéro cloud. ROI constaté x3 chez nos clients.">
 <meta property="og:image" content="https://ia-gence.com/assets/img/og-image.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,22 +19,24 @@
 <link rel="apple-touch-icon" href="/assets/img/logo-mini.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/logo-full.webp" type="image/webp">
 
+<!-- Critical CSS — Design Tokens + Essential -->
 <style>
-:root{--orange:#FF5C00;--orange-dim:rgba(255,92,0,0.07);--orange-glow:rgba(255,92,0,0.22);--red:#D90012;--red-dim:rgba(217,0,18,0.08);--navy:#1A2B42;--navy-mid:#243650;--green:#00FF66;--bg:#FCFCFC;--bg-off:#F8F9FA;--text:#131313;--text-muted:#666666;--text-dim:#9E9E9E;--border:#EAEAEA;--white:#FFFFFF;--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
+:root{--orange-50:#FFF4ED;--orange-100:#FFE4D1;--orange-200:#FFC9A3;--orange-300:#FFA366;--orange-400:#FF7D33;--orange-500:#FF5C00;--orange-600:#CC4A00;--orange-700:#993700;--orange-800:#662500;--navy-50:#F0F4F8;--navy-100:#D9E2EC;--navy-200:#BCCCDC;--navy-300:#9FB3C8;--navy-400:#627D98;--navy-500:#486581;--navy-600:#334E68;--navy-700:#243B53;--navy-800:#1A2B42;--navy-900:#0F1B2D;--neutral-0:#FFFFFF;--neutral-50:#FAFAFA;--neutral-100:#F5F5F5;--neutral-200:#E5E5E5;--neutral-300:#D4D4D4;--neutral-400:#A3A3A3;--neutral-500:#737373;--neutral-600:#525252;--neutral-700:#404040;--neutral-800:#262626;--neutral-900:#171717;--success:#10B981;--warning:#F59E0B;--error:#EF4444;--orange-glow:rgba(255,92,0,0.35);--navy-glow:rgba(26,43,66,0.3);--gradient-brand:linear-gradient(135deg,#FF5C00 0%,#CC4A00 40%,#334E68 70%,#1A2B42 100%);--gradient-brand-text:linear-gradient(135deg,#FF5C00,#FFA366);--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-8:48px;--space-10:64px;--space-12:80px;--space-16:96px;--space-20:128px;--ease-out:cubic-bezier(0.25,0.1,0.25,1);--ease-in-out:cubic-bezier(0.4,0,0.2,1);--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
-.container{max-width:1100px;margin:0 auto;padding:0 32px}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;display:flex;justify-content:space-between;align-items:center;background:rgba(248,248,246,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
-.ticker-wrap{background:var(--navy);overflow:hidden;padding:11px 0;margin-top:64px}
-#hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1fr 400px;background:var(--white);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neutral-0);line-height:1.625;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+@media(max-width:768px){.container{padding:0 20px}}
+@media(max-width:480px){.container{padding:0 16px}}
 </style>
 
+<link rel="stylesheet" href="assets/css/design-tokens.css" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+<noscript><link rel="stylesheet" href="assets/css/design-tokens.css"><link rel="stylesheet" href="assets/css/style.css"></noscript>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,18 +68,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <filter id="warp-filter" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="turbulence" baseFrequency="0.008 0.006" numOctaves="2" seed="3" result="turbulence"/>
-      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="18" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="warp-filter-strong" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="turbulence" baseFrequency="0.012 0.008" numOctaves="3" seed="5" result="turbulence"/>
-      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="28" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-  </defs>
-</svg>
+<!-- Cursor Spotlight -->
+<div class="cursor-spotlight cursor-spotlight-light" id="cursorSpotlight" aria-hidden="true"></div>
+
+<!-- Section Dots -->
+<nav class="section-dots" id="sectionDots" aria-label="Navigation par sections">
+  <button class="section-dot active" data-section="0" title="Hero" aria-label="Section Hero"></button>
+  <button class="section-dot" data-section="1" title="Calculateur" aria-label="Section Calculateur"></button>
+  <button class="section-dot" data-section="2" title="Solutions" aria-label="Section Solutions"></button>
+  <button class="section-dot" data-section="3" title="Garantie" aria-label="Section Garantie"></button>
+  <button class="section-dot" data-section="4" title="Résultats" aria-label="Section Résultats"></button>
+  <button class="section-dot" data-section="5" title="Méthode" aria-label="Section Méthode"></button>
+  <button class="section-dot" data-section="6" title="Fondateur" aria-label="Section Fondateur"></button>
+</nav>
 
 <!-- ═══════════════════════════════════════
      MOBILE NAV
@@ -86,94 +89,60 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
   <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
   <div class="mobile-nav-links">
     <a href="#calculateur" class="mobile-nav-link" onclick="closeMobileNav()">Calculateur</a>
-    <a href="#axes" class="mobile-nav-link" onclick="closeMobileNav()">Solutions</a>
+    <a href="#solutions" class="mobile-nav-link" onclick="closeMobileNav()">Solutions</a>
     <a href="#garantie" class="mobile-nav-link" onclick="closeMobileNav()">Garantie</a>
-    <a href="#temoignages" class="mobile-nav-link" onclick="closeMobileNav()">Résultats</a>
-    <a href="#methodo" class="mobile-nav-link" onclick="closeMobileNav()">Méthode</a>
+    <a href="#resultats" class="mobile-nav-link" onclick="closeMobileNav()">Résultats</a>
+    <a href="#methode" class="mobile-nav-link" onclick="closeMobileNav()">Méthode</a>
   </div>
   <div class="mobile-nav-cta">
-    <button class="btn-primary" style="width:100%;display:block;text-align:center">
-      Parler 15 min →
-    </button>
+    <a href="#cta-final" class="btn-glow" style="width:100%;display:block;text-align:center;text-decoration:none" onclick="closeMobileNav()">Parler 15 min →</a>
   </div>
 </div>
 
 <!-- ═══════════════════════════════════════
-     NAV
+     NAV — iOS GLASS
 ═══════════════════════════════════════ -->
-<nav id="main-nav">
+<header class="top-nav" id="topNav">
   <a href="/" class="nav-logo">
-    <img src="assets/img/logo-full.webp" alt="IAgence" height="32" width="120">
+    <img src="assets/img/logo-full.webp" alt="IAgence" height="28" width="105">
   </a>
-  <div class="nav-links">
-    <a href="#calculateur" class="nav-link">Calculateur</a>
-    <a href="#axes" class="nav-link">Solutions</a>
-    <a href="#temoignages" class="nav-link">Résultats</a>
-    <a href="#methodo" class="nav-link">Méthode</a>
-    <button class="nav-cta">
-      <div class="nav-cta-dot"></div>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#calculateur">Calculateur</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#resultats">Résultats</a>
+    <a href="#methode">Méthode</a>
+    <a href="#cta-final" class="nav-cta-btn">
+      <span class="nav-cta-dot"></span>
       Parler 15 min
-    </button>
-  </div>
+    </a>
+  </nav>
   <button class="hamburger" onclick="openMobileNav()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
-</nav>
+</header>
 
-<!-- ═══════════════════════════════════════
-     TICKER
-═══════════════════════════════════════ -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <span class="ticker-item">Distribution industrielle Rambouillet — <span class="hi">+31 000 € CA récupéré</span></span>
-    <span class="ticker-item">Négoce électrique Courtabœuf — <span class="hi">devis en 9 min</span> au lieu de 2h</span>
-    <span class="ticker-item">Conditionnement Wissous — <span class="hi">marge nette record</span></span>
-    <span class="ticker-item">SAV réduit de <span class="hi">73%</span> sur le temps de traitement</span>
-    <span class="ticker-item">Zéro employé licencié — <span class="hi">100% puissance de vente récupérée</span></span>
-    <span class="ticker-item">Négoce technique Massy — <span class="hi">devis catalogue en 30 sec</span></span>
-    <span class="ticker-item">Distribution EPI Les Ulis — <span class="hi">0 ressaisie ERP</span></span>
-    <span class="ticker-item">Distribution industrielle Rambouillet — <span class="hi">+31 000 € CA récupéré</span></span>
-    <span class="ticker-item">Négoce électrique Courtabœuf — <span class="hi">devis en 9 min</span> au lieu de 2h</span>
-    <span class="ticker-item">Conditionnement Wissous — <span class="hi">marge nette record</span></span>
-    <span class="ticker-item">SAV réduit de <span class="hi">73%</span> sur le temps de traitement</span>
-    <span class="ticker-item">Zéro employé licencié — <span class="hi">100% puissance de vente récupérée</span></span>
-    <span class="ticker-item">Négoce technique Massy — <span class="hi">devis catalogue en 30 sec</span></span>
-    <span class="ticker-item">Distribution EPI Les Ulis — <span class="hi">0 ressaisie ERP</span></span>
-  </div>
-</div>
-
+<main>
 <!-- ═══════════════════════════════════════
      HERO
 ═══════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-bg">
-    <div class="bg-grid-warped"></div>
-    <div class="textural-overlay"></div>
-    <div class="hero-bg-accent"></div>
-  </div>
-
-  <div class="hero-left container" style="padding-top:100px">
-    <div class="hero-eyebrow">L'hémorragie silencieuse de la distribution B2B</div>
-    <h1 class="hero-h1">
-      Arrêtez de perdre<br>
-      des marchés<br>
-      <span class="line-ruled">
-        <span class="accent">sur les délais.</span>
-      </span>
-    </h1>
-    <p class="hero-sub">
-      Vos conseillers passent <strong>3 à 4 heures par jour</strong> à chercher des références dans des PDF,
-      ressaisir des lignes dans Sage, EBP ou Cegid et trier des mails SAV — au lieu de prospecter, rappeler et vendre.
-      On retire ces 4 heures de bruit. <strong>Vos équipes ne font plus que vendre et délivrer.</strong>
-    </p>
+<section class="full-section hero" id="section-hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot" aria-hidden="true"></span>
+      Agents IA autonomes · Déployés en 12 jours
+    </div>
+    <h1>Vos conseillers cherchent<br>au lieu de<br><span class="gradient-text">vendre.</span></h1>
+    <p>Vos conseillers passent <strong>3 à 4 heures par jour</strong> à chercher des références dans des PDF, ressaisir des lignes dans Sage, EBP ou Cegid, trier des mails SAV. <strong>Pendant ce temps, personne ne prospecte.</strong> On retire le bruit — vos équipes vendent, prospectent et délivrent.</p>
     <div class="hero-actions">
-      <a href="#calculateur" class="btn-primary">Calculer ma perte →</a>
-      <div class="hero-badge">Déployé sur <span>votre machine</span> — rien ne sort de chez vous</div>
+      <a href="#calculateur" class="hero-cta">Calculer ma perte →</a>
+      <div class="hero-badge-sub">Déployé sur <span>votre machine</span> — zéro donnée dans le cloud</div>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="stat-val" data-target="9" data-suffix=" min">9 min</span>
-        <div class="stat-label">délai devis moyen après déploiement<br><span style="color:var(--text-dim)">(contre 1h45 avant)</span></div>
+        <span class="stat-val">9 min</span>
+        <div class="stat-label">délai devis moyen après déploiement<br><span>(contre 1h45 avant)</span></div>
       </div>
       <div class="hero-stat">
         <span class="stat-val">J+12</span>
@@ -185,127 +154,107 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
       </div>
     </div>
   </div>
-
-  <!-- Right panel: live loss calculator preview -->
-  <div class="hero-right">
-    <div class="hero-right-bg"><div class="bg-grid-warped"></div></div>
-    <div class="textural-overlay"></div>
-    <div class="hero-right-label">// Coût_main_d_oeuvre_perdu // temps_réel</div>
-    <div class="hero-right-num" id="hero-loss">92 400 €</div>
-    <div class="hero-right-unit">/ an</div>
-    <div class="hero-right-desc">
-      Pour une équipe de 6 conseillers, 2h de tâches non-commerciales par jour à 35€/h chargé.<br>
-      <strong style="color:rgba(255,255,255,0.6)">Ajustez le calculateur pour voir vos chiffres réels →</strong>
-    </div>
-    <button class="hero-right-cta">
-      Stopper cette hémorragie — 15 min →
-    </button>
-    <div class="hero-right-sub">Sans engagement // Fondateur IAgence // 91/78</div>
-    <div class="hero-coord">
-      COORD_91/78 // ESSONNE_YVELINES<br>
-      SYSTEM_READY // DEPLOY_MODE<br>
-      UPTIME_99.8% // NODES_OPERATIONAL
-    </div>
-  </div>
 </section>
 
-<!-- Mini bandeau perte mobile -->
-<div class="mobile-loss-banner" id="mobile-loss-banner">
-  <span class="mobile-loss-label">Perte annuelle estimee :</span>
-  <span class="mobile-loss-val" id="mobile-loss-val">92 400 €</span>
-  <a href="#calculateur" class="mobile-loss-cta">Ajuster →</a>
+<!-- ═══════════════════════════════════════
+     TICKER
+═══════════════════════════════════════ -->
+<div class="ticker-bar">
+    <div class="ticker-inner">
+    <div class="ticker-item"><span class="ticker-num">÷2</span><span class="ticker-text">temps de qualification devis — ADCA, Égly</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">27 250 €</span><span class="ticker-text">économisés en 6 mois — NOVIPACK, Massy</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">ROI x3</span><span class="ticker-text">en 4 mois — ADCA · 24 salariés</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">0</span><span class="ticker-text">employé licencié — 100% puissance opérationnelle</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">18 600 €</span><span class="ticker-text">économisés en 4 mois — ADCA, Égly</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">ROI x3,5</span><span class="ticker-text">constaté — NOVIPACK · 17 salariés</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">÷2</span><span class="ticker-text">temps de qualification devis — ADCA, Égly</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">27 250 €</span><span class="ticker-text">économisés en 6 mois — NOVIPACK, Massy</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">ROI x3</span><span class="ticker-text">en 4 mois — ADCA · 24 salariés</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">0</span><span class="ticker-text">employé licencié — 100% puissance opérationnelle</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">18 600 €</span><span class="ticker-text">économisés en 4 mois — ADCA, Égly</span></div>
+    <span class="ticker-sep" aria-hidden="true">•</span>
+    <div class="ticker-item"><span class="ticker-num">ROI x3,5</span><span class="ticker-text">constaté — NOVIPACK · 17 salariés</span></div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════
      CALCULATEUR
 ═══════════════════════════════════════ -->
-<section id="calculateur">
-  <div class="container">
-    <div class="calc-header reveal">
-      <div class="sys">ROI_Gain_Unit — Calculateur de perte réelle</div>
-      <h2 class="calc-h2">Combien vous perdez<br><span>chaque année.</span></h2>
-      <p class="calc-sub">Entrez vos chiffres. Pas des moyennes génériques — les vôtres. Le résultat s'affiche en temps réel.</p>
+<section class="full-section" id="calculateur" style="background:var(--neutral-50)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
+    <div class="section-header reveal">
+      <div class="section-label">ROI — Calculateur de perte réelle</div>
+      <h2 class="section-title">Ce que vous brûlez<br><span class="gradient-text">chaque année.</span></h2>
+      <p class="section-desc">Vos chiffres, pas les nôtres. Le résultat s'affiche en temps réel.</p>
     </div>
     <div class="calc-grid reveal reveal-delay-1">
       <div class="calc-inputs">
-        <!-- Slider 1 -->
         <div class="calc-input-group">
-          <label class="calc-label">Conseillers / commerciaux / ADV / SAV</label>
+          <label class="calc-label">Nombre de personnes côté commercial + ADV + SAV</label>
           <div class="calc-input-row">
             <div class="calc-val" id="nb-display">6</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="nb-slider" min="1" max="20" value="6" aria-label="Nombre de conseillers">
-              <div class="calc-hint">Toute personne qui cherche des infos ou gère de l'administratif</div>
+              <input type="range" id="nb-slider" class="slider-glow" min="1" max="20" value="6" aria-label="Nombre de conseillers">
+              <div class="calc-hint">Tous ceux qui passent du temps sur autre chose que vendre ou délivrer</div>
             </div>
           </div>
         </div>
-        <!-- Slider 2 -->
         <div class="calc-input-group">
-          <label class="calc-label">Heures perdues en tâches non-vente / jour / personne</label>
+          <label class="calc-label">Heures improductives par jour par personne</label>
           <div class="calc-input-row">
             <div class="calc-val" id="h-display">2h</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="h-slider" min="1" max="6" value="2" step="0.5" aria-label="Heures perdues par jour">
-              <div class="calc-hint">Recherche catalogue, ressaisie ERP, tri mails, relances manuelles</div>
+              <input type="range" id="h-slider" class="slider-glow" min="1" max="6" value="2" step="0.5" aria-label="Heures perdues par jour">
+              <div class="calc-hint">PDF fournisseurs, ressaisie ERP, mails SAV, relances manuelles</div>
             </div>
           </div>
         </div>
-        <!-- Slider 3 -->
         <div class="calc-input-group">
           <label class="calc-label">Coût horaire chargé (salaire brut + charges)</label>
           <div class="calc-input-row">
             <div class="calc-val" id="taux-display">35€</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="taux-slider" min="28" max="55" value="35" step="1" aria-label="Coût horaire chargé">
+              <input type="range" id="taux-slider" class="slider-glow" min="28" max="55" value="35" step="1" aria-label="Coût horaire chargé">
               <div class="calc-hint">Base chargée — inclut cotisations, mutuelle, espace de travail</div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Result -->
-      <div class="calc-result">
-        <div class="calc-result-bg"><div class="bg-grid"></div></div>
+      <div class="calc-result-card">
         <div class="calc-result-label">// PERTE_ANNUELLE_MAIN_D'OEUVRE</div>
         <div class="calc-result-amount" id="total-display">92 400 €</div>
         <div class="calc-result-sub">en coût sur des tâches qui n'apportent aucune vente</div>
         <div class="calc-breakdown">
-          <div class="cbr">
-            <span class="cbr-label">Heures perdues / an</span>
-            <span class="cbr-val" id="bd-heures">5 760 h</span>
-          </div>
-          <div class="cbr">
-            <span class="cbr-label">Coût horaire chargé</span>
-            <span class="cbr-val" id="bd-taux">35 €/h</span>
-          </div>
-          <div class="cbr">
-            <span class="cbr-label">CA potentiel non-réalisé*</span>
-            <span class="cbr-val" id="bd-ca">+46 200 €</span>
-          </div>
+          <div class="cbr"><span class="cbr-label">Heures perdues / an</span><span class="cbr-val" id="bd-heures">5 760 h</span></div>
+          <div class="cbr"><span class="cbr-label">Coût horaire chargé</span><span class="cbr-val" id="bd-taux">35 €/h</span></div>
+          <div class="cbr"><span class="cbr-label">Ventes manquées pendant ce temps*</span><span class="cbr-val" id="bd-ca">+46 200 €</span></div>
         </div>
         <div class="calc-alert">
-          Vous perdez <span id="perte-span">92 400 €</span> par an parce que vos conseillers cherchent des références au lieu de décrocher leur téléphone.
+          Vos conseillers cherchent des références pendant que vos concurrents décrochent le téléphone. Coût : <span id="perte-span">92 400 €</span> par an.
         </div>
-
-        <!-- Email capture -->
         <div class="calc-capture" id="calc-capture-form">
-          <div class="calc-capture-title">Recevez votre rapport personnalisé ↓</div>
+          <div class="calc-capture-title">Recevez votre diagnostic chiffré ↓</div>
           <div class="calc-capture-row">
-            <input type="email" class="calc-capture-input" id="calc-email"
-              placeholder="votre@email.fr" autocomplete="email">
-            <button class="calc-capture-btn" onclick="submitCalcEmail()">Obtenir →</button>
+            <input type="email" class="input-glow" id="calc-email" placeholder="votre@email.fr" autocomplete="email" aria-label="Votre adresse email">
+            <button class="btn-glow" onclick="submitCalcEmail()" style="white-space:nowrap">Obtenir →</button>
           </div>
-          <div class="calc-cta-sub">Rapport PDF gratuit · 15 MIN avec fondateur IAgence · 91/78</div>
+          <div class="calc-cta-sub">Diagnostic PDF · 15 min avec Pierre Andrieux · 91/78</div>
         </div>
-
-        <!-- Thank you state -->
-        <div class="calc-thanks" id="calc-thanks">
+        <div class="calc-thanks" id="calc-thanks" style="display:none">
           <div class="calc-thanks-icon">✓</div>
-          <div class="calc-thanks-text">Rapport envoyé. Passons à l'action.</div>
-          <button class="calc-thanks-cta">
-            📅 Bloquer un créneau — Jeudi ou vendredi ?
-          </button>
-          <div class="calc-cta-sub" style="margin-top:10px">15 MIN // FONDATEUR // 91/78 // SANS ENGAGEMENT</div>
+          <div class="calc-thanks-text">Diagnostic envoyé. Passons aux choses sérieuses.</div>
+          <button class="btn-glow" data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" data-cal-config='{"layout":"month_view"}' style="width:100%;margin-top:var(--space-4)">📅 15 min avec Pierre — cette semaine ?</button>
+          <div class="calc-cta-sub" style="margin-top:var(--space-3)">15 MIN // FONDATEUR // 91/78 // SANS ENGAGEMENT</div>
         </div>
       </div>
     </div>
@@ -313,110 +262,97 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 </section>
 
 <!-- ═══════════════════════════════════════
-     AXES / SOLUTIONS
+     SOLUTIONS / AXES
 ═══════════════════════════════════════ -->
-<section id="axes">
-  <div class="container">
-    <div class="axes-header reveal">
-      <div class="sys">Solutions IA sur mesure</div>
-      <h2 class="axes-h2">Agents autonomes conçus pour<br><span>les trois axes qui tuent votre croissance.</span></h2>
-      <p class="axes-intro">
-        Intégrés sur votre PC Windows en 12 jours. Sans cloud, sans formation longue, sans toucher à votre ERP.
-        Chaque action externe passe par votre validation — l'agent prépare, vous décidez.
-      </p>
-    </div>
-    <div class="axes-tabs">
-      <button class="axes-tab active" data-panel="prospection">Prospection & devis</button>
-      <button class="axes-tab" data-panel="adv">Catalogue & ADV</button>
-      <button class="axes-tab" data-panel="sav">SAV & litiges</button>
+<section class="full-section" id="solutions" style="background:var(--neutral-0)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
+    <div class="section-header reveal">
+      <div class="section-label">Solutions IA sur mesure</div>
+      <h2 class="section-title">Trois goulots d'étranglement.<br><span class="gradient-text">Trois agents autonomes.</span></h2>
+      <p class="section-desc">Installés sur votre PC Windows en 12 jours. Sans cloud, sans formation, sans toucher à votre ERP. L'agent prépare — votre équipe décide.</p>
     </div>
 
-    <div class="axes-panel active" id="panel-prospection">
-      <div class="axe-text">
-        <h3>Trouver <span>les bonnes cibles</span> et relancer les devis qui dorment</h3>
-        <p>Vos commerciaux passent 2h par jour à chercher des prospects et analyser des sites avant de décrocher le téléphone. Les devis envoyés il y a 3 mois ? Personne n'a le temps de relancer.</p>
-        <p>L'agent qualifie chaque cible avant l'appel. Brief en 2 minutes : secteur, taille, besoins probables, angle d'accroche. Les devis dormants sont relancés avec un brouillon personnalisé, prêt à envoyer d'un clic.</p>
-        <div class="axe-perte">
-          PERTE_ÉVITÉE : 30 000 – 90 000 €/an
-          <small>selon volume de devis envoyés non-relancés et taille de l'équipe commerciale</small>
+    <div class="tabs-glow reveal" id="solutionsTabs" role="tablist" aria-label="Solutions">
+      <button class="tab-glow" role="tab" aria-selected="true" aria-controls="panel-prospection" id="tab-prospection" data-panel="prospection">Prospection commerciale</button>
+      <button class="tab-glow" role="tab" aria-selected="false" aria-controls="panel-adv" id="tab-adv" data-panel="adv">Catalogue, devis & ADV</button>
+      <button class="tab-glow" role="tab" aria-selected="false" aria-controls="panel-sav" id="tab-sav" data-panel="sav">SAV & litiges</button>
+      <div class="tab-indicator" id="tabIndicator" aria-hidden="true"></div>
+    </div>
+
+    <div class="axes-panel active" id="panel-prospection" role="tabpanel" aria-labelledby="tab-prospection">
+      <div class="axe-grid">
+        <div class="axe-text">
+          <h3><span class="gradient-text">Chaque matin, vos commerciaux ont 5 nouveaux prospects qualifiés sur leur bureau.</span></h3>
+          <p>Aujourd'hui, vos commerciaux prospectent entre deux devis. Quand ils ont le temps. Ils tapent un nom dans Google, parcourent un site web, essaient de deviner le bon angle — et rappellent le lendemain parce qu'ils n'ont pas eu le temps de finir.</p>
+          <p>L'agent prospecte pendant que votre équipe dort. Il identifie les cibles dans votre zone, analyse leur activité, résume leur besoin probable et rédige l'angle d'accroche. <strong>Le matin, votre commercial décroche le téléphone — il sait déjà à qui il parle et pourquoi.</strong></p>
+          <div class="axe-perte">
+            GAIN PROJETÉ : nouveaux clients chaque mois
+            <small>chiffré au diagnostic</small>
+          </div>
+        </div>
+        <div class="axe-visual">
+          <div class="axe-step"><div class="axe-step-num">01</div><div class="axe-step-content"><strong>Cibles identifiées automatiquement</strong>Secteur, taille, localisation, signaux d'achat — l'agent ratisse votre zone chaque nuit.</div></div>
+          <div class="axe-step"><div class="axe-step-num">02</div><div class="axe-step-content"><strong>Fiche prospect prête en 2 min</strong>Résumé activité, besoins probables, angle d'accroche, objections anticipées.</div></div>
+          <div class="axe-step"><div class="axe-step-num">03</div><div class="axe-step-content"><strong>Devis dormants détectés et relancés</strong>Les devis envoyés sans réponse remontent avec un brouillon de relance personnalisé.</div></div>
+          <div class="axe-step"><div class="axe-step-num">04</div><div class="axe-step-content"><strong>Votre commercial vend — il ne cherche plus</strong>Il décroche le téléphone avec toutes les cartes en main. Chaque jour.</div></div>
         </div>
       </div>
-      <div class="axe-visual">
-        <div class="axe-step">
-          <div class="axe-step-num">01</div>
-          <div class="axe-step-content"><strong>Prospect entrant identifié</strong>Secteur, taille, besoins probables synthétisés automatiquement.</div>
+    </div>
         </div>
-        <div class="axe-step">
-          <div class="axe-step-num">02</div>
-          <div class="axe-step-content"><strong>Brief commercial prêt en 2 min</strong>Angle d'accroche, historique secteur, objections probables.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">03</div>
-          <div class="axe-step-content"><strong>Devis dormants relancés</strong>Brouillon personnalisé généré, votre conseiller clique "envoyer".</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">04</div>
-          <div class="axe-step-content"><strong>Validation humaine sur tout</strong>Aucun mail ne part sans votre accord. Toujours.</div>
+        <div class="axe-visual">
+          <div class="axe-step"><div class="axe-step-num">01</div><div class="axe-step-content"><strong>Cibles identifiées automatiquement</strong>Secteur, taille, localisation, signaux d'achat — l'agent ratisse votre zone chaque nuit.</div></div>
+          <div class="axe-step"><div class="axe-step-num">02</div><div class="axe-step-content"><strong>Fiche prospect prête en 2 min</strong>Résumé activité, besoins probables, angle d'accroche, objections anticipées.</div></div>
+          <div class="axe-step"><div class="axe-step-num">03</div><div class="axe-step-content"><strong>Devis dormants détectés et relancés</strong>Les devis envoyés sans réponse remontent avec un brouillon de relance personnalisé.</div></div>
+          <div class="axe-step"><div class="axe-step-num">04</div><div class="axe-step-content"><strong>Votre commercial vend — il ne cherche plus</strong>Il décroche le téléphone avec toutes les cartes en main. Chaque jour.</div></div>
         </div>
       </div>
     </div>
 
-    <div class="axes-panel" id="panel-adv">
-      <div class="axe-text">
-        <h3><span>Référence, prix, dispo</span> en 30 secondes — même sur 40 000 références</h3>
-        <p>Chercher une référence dans un PDF fournisseur de 400 pages, recouper avec le stock Sage, calculer la marge client avec les remises négociées... votre conseiller y passe 15 minutes par devis.</p>
-        <p>L'agent tourne sur vos catalogues locaux, connaît vos remises par client, accède à votre stock en temps réel. Réponse en 30 secondes, sans aucune donnée sortie de vos locaux.</p>
-        <div class="axe-perte">
-          PERTE_ÉVITÉE : 20 000 – 60 000 €/an
-          <small>selon volume de devis par jour et nombre de références gérées</small>
+    <div class="axes-panel" id="panel-adv" role="tabpanel" aria-labelledby="tab-adv" style="display:none">
+      <div class="axe-grid">
+        <div class="axe-text">
+          <h3><span class="gradient-text">Référence, prix, stock, devis</span> — 30 secondes au lieu de 15 minutes.</h3>
+          <p>PDF fournisseur de 400 pages. Stock Sage à recouper. Remise client à recalculer. Votre conseiller y passe 15 minutes — et le client attend au téléphone.</p>
+          <p>L'agent connaît vos catalogues, vos remises par client, votre stock en temps réel. Référence trouvée, prix calculé, devis pré-rempli — en 30 secondes. <strong>Aucune donnée ne quitte vos locaux.</strong></p>
+          <div class="axe-perte">
+            GAIN PROJETÉ : temps devis ÷10
+            <small>chiffré au diagnostic</small>
+          </div>
+        </div>
+        <div class="axe-visual">
+          <div class="axe-step"><div class="axe-step-num">01</div><div class="axe-step-content"><strong>Référence demandée par le client</strong>Votre conseiller tape la demande dans l'interface agent.</div></div>
+          <div class="axe-step"><div class="axe-step-num">02</div><div class="axe-step-content"><strong>Catalogues RAG parcourus en local</strong>Tous vos PDF fournisseurs indexés — recherche sémantique instantanée.</div></div>
+          <div class="axe-step"><div class="axe-step-num">03</div><div class="axe-step-content"><strong>Prix remisé, stock, délai</strong>Calcul automatique selon votre grille remises par client.</div></div>
+          <div class="axe-step"><div class="axe-step-num">04</div><div class="axe-step-content"><strong>Devis exporté vers Sage/EBP/Cegid</strong>Ressaisie zéro — votre conseiller valide et envoie.</div></div>
         </div>
       </div>
-      <div class="axe-visual">
-        <div class="axe-step">
-          <div class="axe-step-num">01</div>
-          <div class="axe-step-content"><strong>Référence demandée par le client</strong>Votre conseiller tape la demande dans l'interface agent.</div>
+    </div>
         </div>
-        <div class="axe-step">
-          <div class="axe-step-num">02</div>
-          <div class="axe-step-content"><strong>Catalogues RAG parcourus en local</strong>Tous vos PDF fournisseurs indexés — recherche sémantique instantanée.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">03</div>
-          <div class="axe-step-content"><strong>Prix remisé, stock, délai</strong>Calcul automatique selon votre grille remises par client.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">04</div>
-          <div class="axe-step-content"><strong>Devis exporté vers Sage/EBP/Cegid</strong>Ressaisie zéro — votre conseiller valide et envoie.</div>
+        <div class="axe-visual">
+          <div class="axe-step"><div class="axe-step-num">01</div><div class="axe-step-content"><strong>Référence demandée par le client</strong>Votre conseiller tape la demande dans l'interface agent.</div></div>
+          <div class="axe-step"><div class="axe-step-num">02</div><div class="axe-step-content"><strong>Catalogues RAG parcourus en local</strong>Tous vos PDF fournisseurs indexés — recherche sémantique instantanée.</div></div>
+          <div class="axe-step"><div class="axe-step-num">03</div><div class="axe-step-content"><strong>Prix remisé, stock, délai</strong>Calcul automatique selon votre grille remises par client.</div></div>
+          <div class="axe-step"><div class="axe-step-num">04</div><div class="axe-step-content"><strong>Devis exporté vers Sage/EBP/Cegid</strong>Ressaisie zéro — votre conseiller valide et envoie.</div></div>
         </div>
       </div>
     </div>
 
-    <div class="axes-panel" id="panel-sav">
-      <div class="axe-text">
-        <h3>Mails SAV traités <span>sans que votre équipe</span> les ouvre un par un</h3>
-        <p>80% de vos mails SAV sont des réclamations, accusés de réception, demandes de suivi de commande ou relances fournisseur. Votre équipe passe 1h45/jour sur des réponses copy-paste.</p>
-        <p>L'agent classe, priorise et rédige les brouillons de réponse. Les litiges complexes remontent immédiatement à la bonne personne. Votre équipe valide, clique envoyer — elle ne rédige plus.</p>
-        <div class="axe-perte">
-          PERTE_ÉVITÉE : 15 000 – 45 000 €/an
-          <small>selon volume SAV et nombre de personnes qui traitent les mails</small>
+    <div class="axes-panel" id="panel-sav" role="tabpanel" aria-labelledby="tab-sav" style="display:none">
+      <div class="axe-grid">
+        <div class="axe-text">
+          <h3><span class="gradient-text">80% de vos mails SAV ne nécessitent</span> aucun jugement humain.</h3>
+          <p>Suivi de commande, accusé de réception, relance fournisseur — votre équipe copie-colle les mêmes réponses depuis des années. 1h45 par jour. Chaque jour.</p>
+          <p>L'agent trie, priorise, rédige le brouillon. Les vrais litiges remontent immédiatement. Votre équipe ne traite plus que ce qui demande un cerveau humain.</p>
+          <div class="axe-perte">
+            GAIN PROJETÉ : temps SAV ÷4
+            <small>chiffré au diagnostic</small>
+          </div>
         </div>
-      </div>
-      <div class="axe-visual">
-        <div class="axe-step">
-          <div class="axe-step-num">01</div>
-          <div class="axe-step-content"><strong>Mail entrant classifié automatiquement</strong>Réclamation, suivi, litige, demande info — trié en 3 secondes.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">02</div>
-          <div class="axe-step-content"><strong>Brouillon réponse généré</strong>Ton adapté, numéro commande récupéré, réponse personnalisée.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">03</div>
-          <div class="axe-step-content"><strong>Votre équipe clique "envoyer"</strong>Validation humaine sur tout. Aucun mail part sans accord.</div>
-        </div>
-        <div class="axe-step">
-          <div class="axe-step-num">04</div>
-          <div class="axe-step-content"><strong>Litiges remontés en priorité</strong>Ce qui demande un vrai jugement humain — visible immédiatement.</div>
+        <div class="axe-visual">
+          <div class="axe-step"><div class="axe-step-num">01</div><div class="axe-step-content"><strong>Mail entrant classifié automatiquement</strong>Réclamation, suivi, litige, demande info — trié en 3 secondes.</div></div>
+          <div class="axe-step"><div class="axe-step-num">02</div><div class="axe-step-content"><strong>Brouillon réponse généré</strong>Ton adapté, numéro commande récupéré, réponse personnalisée.</div></div>
+          <div class="axe-step"><div class="axe-step-num">03</div><div class="axe-step-content"><strong>Votre équipe clique "envoyer"</strong>Validation humaine sur tout. Aucun mail part sans accord.</div></div>
+          <div class="axe-step"><div class="axe-step-num">04</div><div class="axe-step-content"><strong>Litiges remontés en priorité</strong>Ce qui demande un vrai jugement humain — visible immédiatement.</div></div>
         </div>
       </div>
     </div>
@@ -426,22 +362,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 <!-- ═══════════════════════════════════════
      GARANTIE
 ═══════════════════════════════════════ -->
-<section id="garantie">
-  <div class="container">
+<section class="full-section" id="garantie" style="background:var(--navy-900)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
     <div class="garantie-box reveal">
-      <div class="bg-grid"></div>
-      <div class="textural-overlay"></div>
+      <canvas id="garantieCanvas" aria-hidden="true"></canvas>
       <div class="garantie-left">
-        <div class="sys">Stability_First — Engagement contractuel</div>
-        <h2 class="garantie-h2">Zéro risque.<br><span>Ou on rembourse.</span></h2>
-        <p class="garantie-text">
-          L'outil tourne sur <strong>votre propre machine</strong>. Vos remises, vos marges clients, vos conditions fournisseurs — rien ne sort jamais de chez vous. Aucun email, devis ou fichier n'est envoyé sans que votre équipe valide.
+        <div class="section-label" style="color:var(--orange-400)">Stability First — Engagement contractuel</div>
+        <h2 class="section-title" style="color:white">Si ça ne se rembourse pas,<br><span class="gradient-text">on vous rembourse.</span></h2>
+        <p class="garantie-text" style="color:var(--navy-300)">
+          Vos remises, vos marges clients, vos conditions fournisseurs — tout reste sur votre machine. Aucun email, aucun devis ne part sans que votre équipe valide.
         </p>
-        <p class="garantie-text">
-          Et si dans 6 mois vos conseillers n'ont pas récupéré en temps commercial l'équivalent du prix de l'installation —
+        <p class="garantie-text" style="color:var(--navy-300)">
+          Et si dans 6 mois l'installation ne s'est pas remboursée en temps commercial récupéré —
         </p>
         <div class="garantie-promise">
-          <strong>Nous remboursons la différence. Contractuellement.</strong><br>
+          <strong>On rembourse la différence. C'est dans le bon de commande.</strong><br>
           Ce n'est pas une promesse marketing. C'est dans le bon de commande, noir sur blanc.
         </div>
       </div>
@@ -449,31 +384,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
         <div class="garantie-points">
           <div class="garantie-point">
             <div class="gp-icon">🖥️</div>
-            <div class="gp-text">
-              <strong>100% local — votre machine</strong>
-              Rien ne passe par un serveur extérieur. Vos données ne quittent pas vos locaux.
-            </div>
+            <div class="gp-text"><strong style="color:white">100% local — votre machine</strong><span style="color:var(--navy-300)">Rien ne passe par un serveur extérieur. Vos données ne quittent pas vos locaux.</span></div>
           </div>
           <div class="garantie-point">
             <div class="gp-icon">✍️</div>
-            <div class="gp-text">
-              <strong>Validation humaine sur tout</strong>
-              Aucun email, devis ou fichier n'est envoyé sans que votre équipe valide. Toujours.
-            </div>
+            <div class="gp-text"><strong style="color:white">Validation humaine sur tout</strong><span style="color:var(--navy-300)">Aucun email, devis ou fichier n'est envoyé sans que votre équipe valide. Toujours.</span></div>
           </div>
           <div class="garantie-point">
             <div class="gp-icon">🔒</div>
-            <div class="gp-text">
-              <strong>Remises & marges protégées</strong>
-              Vos conditions fournisseurs, vos remises négociées — stockées localement, jamais exposées.
-            </div>
+            <div class="gp-text"><strong style="color:white">Remises & marges protégées</strong><span style="color:var(--navy-300)">Vos conditions fournisseurs, vos remises négociées — stockées localement, jamais exposées.</span></div>
           </div>
           <div class="garantie-point">
             <div class="gp-icon">📋</div>
-            <div class="gp-text">
-              <strong>Garantie ROI contractuelle 6 mois</strong>
-              Investissement installation non récupéré → on rembourse la différence.
-            </div>
+            <div class="gp-text"><strong style="color:white">Garantie ROI contractuelle 6 mois</strong><span style="color:var(--navy-300)">Investissement installation non récupéré → on rembourse la différence.</span></div>
           </div>
         </div>
       </div>
@@ -484,49 +407,36 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 <!-- ═══════════════════════════════════════
      TÉMOIGNAGES
 ═══════════════════════════════════════ -->
-<section id="temoignages">
-  <div class="container">
-    <div class="sys reveal" style="margin-bottom:14px">Ils l'ont fait avant vous</div>
-    <h2 class="temo-h2 reveal">Résultats terrain —<br>zone industrielle 91/78</h2>
+<section class="full-section" id="resultats" style="background:var(--neutral-50)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
+    <div class="section-header reveal">
+      <div class="section-label">Ils l'ont fait avant vous</div>
+      <h2 class="section-title">Résultats constatés —<br><span class="gradient-text">Essonne (91)</span></h2>
+    </div>
     <div class="temo-grid reveal reveal-delay-1">
       <div class="temo-card">
-        <span class="temo-sector">Distribution fournitures · Viry-Châtillon</span>
+        <span class="temo-sector">Contrôle-commande électrique · Égly (91)</span>
         <div class="temo-quote">
-          "Mes commerciaux passaient leur temps à éplucher des PDF fournisseurs. Maintenant ils ont la référence et le prix en 30 secondes.
-          <em>Le premier mois, on a signé deux clients qu'on avait perdus six mois avant pour les mêmes raisons.</em>"
+          "Nos équipes techniques perdaient 30% de leur semaine à fouiller les historiques fournisseurs pour chiffrer les équipements. Pierre a compris qu'on voulait une solution terrain, pas une usine à gaz. <em>On a divisé par deux notre temps de qualification sur les devis complexes. Sur des appels d'offres serrés, c'est ce qui fait la différence.</em>"
         </div>
         <div class="temo-metrics">
-          <div class="temo-metric"><span class="tm-label">CA récupéré</span><span class="tm-val">+31 000 €/an</span></div>
-          <div class="temo-metric"><span class="tm-label">Délai devis</span><span class="tm-val">9 min (avant 1h45)</span></div>
-          <div class="temo-metric"><span class="tm-label">Déploiement</span><span class="tm-val">12 jours</span></div>
+          <div class="temo-metric"><span class="tm-label">Économisé</span><span class="tm-val">18 600 € en 4 mois</span></div>
+          <div class="temo-metric"><span class="tm-label">Temps qualification</span><span class="tm-val">÷2 sur devis complexes</span></div>
+          <div class="temo-metric"><span class="tm-label">ROI constaté</span><span class="tm-val">x3</span></div>
         </div>
-        <div class="temo-author"><strong>Marc D.</strong> — 24 salariés · Sage conservé · 100% local</div>
+        <div class="temo-author"><strong>Damien Capai</strong> — DG délégué · ADCA · 24 salariés</div>
       </div>
       <div class="temo-card">
-        <span class="temo-sector">Négoce électrique · Courtabœuf</span>
+        <span class="temo-sector">Films d'emballage & location machines · Massy (91)</span>
         <div class="temo-quote">
-          "J'avais peur que mes gars se braquent. Au contraire — ils sont soulagés.
-          <em>Mon conseiller senior de 18 ans d'ancienneté m'a dit que c'était la meilleure décision que j'avais prise depuis 5 ans.</em>"
+          "4 000 commandes par an et un parc machines en location — notre goulot n'était pas la vente, c'était l'asphyxie opérationnelle. Pierre est arrivé en chirurgien, pas en vendeur de tech. <em>On a fluidifié le SAV, réduit les erreurs de saisie, et retrouvé la réactivité qui fait notre force depuis 40 ans.</em>"
         </div>
         <div class="temo-metrics">
-          <div class="temo-metric"><span class="tm-label">Devis dormants relancés</span><span class="tm-val">+47 000 €/6 mois</span></div>
-          <div class="temo-metric"><span class="tm-label">SAV récupéré</span><span class="tm-val">1h45/jour/conseiller</span></div>
-          <div class="temo-metric"><span class="tm-label">Déploiement</span><span class="tm-val">14 jours</span></div>
+          <div class="temo-metric"><span class="tm-label">Économisé</span><span class="tm-val">27 250 € en 6 mois</span></div>
+          <div class="temo-metric"><span class="tm-label">Commandes/an</span><span class="tm-val">4 000+ fluidifiées</span></div>
+          <div class="temo-metric"><span class="tm-label">ROI constaté</span><span class="tm-val">x3,5</span></div>
         </div>
-        <div class="temo-author"><strong>Stéphane R.</strong> — 31 salariés · EBP conservé · 0 formation longue</div>
-      </div>
-      <div class="temo-card">
-        <span class="temo-sector">Conditionnement à façon · Wissous</span>
-        <div class="temo-quote">
-          "On avait des devis dormants depuis 3 mois. Personne n'avait le temps de relancer.
-          <em>En 6 semaines, l'agent avait récupéré 19 000 € de commandes qu'on croyait perdues.</em>"
-        </div>
-        <div class="temo-metrics">
-          <div class="temo-metric"><span class="tm-label">Commandes récupérées</span><span class="tm-val">+19 000 €/6 sem.</span></div>
-          <div class="temo-metric"><span class="tm-label">Ressaisie ERP éliminée</span><span class="tm-val">≈ 15 000 €/an</span></div>
-          <div class="temo-metric"><span class="tm-label">Déploiement</span><span class="tm-val">10 jours</span></div>
-        </div>
-        <div class="temo-author"><strong>Thierry L.</strong> — 18 salariés · Cegid conservé · machine Windows existante</div>
+        <div class="temo-author"><strong>Lionel Questroy</strong> — Directeur des opérations · NOVIPACK · 17 salariés</div>
       </div>
     </div>
   </div>
@@ -535,29 +445,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 <!-- ═══════════════════════════════════════
      MÉTHODOLOGIE
 ═══════════════════════════════════════ -->
-<section id="methodo">
-  <div class="container">
-    <div class="methodo-header reveal">
-      <div>
-        <div class="sys">Industrial_Flux — La méthode</div>
-        <h2 class="methodo-h2">De 0 à opérationnel<br><span>en 12 jours.</span></h2>
-      </div>
-      <p class="methodo-sub">
-        Sans formation longue. Sans prestataire IT. Sans toucher à votre ERP. Sur votre infrastructure Windows existante.
-      </p>
+<section class="full-section" id="methode" style="background:var(--neutral-0)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
+    <div class="section-header reveal">
+      <div class="section-label">Industrial Flux — La méthode</div>
+      <h2 class="section-title">Opérationnel<br><span class="gradient-text">en 12 jours.</span></h2>
+      <p class="section-desc">Sans formation. Sans prestataire IT. Sans toucher à votre ERP. Sur votre infrastructure Windows existante.</p>
     </div>
     <div class="methodo-steps reveal reveal-delay-1">
       <div class="methodo-step">
         <div class="methodo-step-num">1</div>
         <span class="methodo-step-tag">J0 — Appel fondateur</span>
         <h3 class="methodo-step-title">Diagnostic 15 min</h3>
-        <p class="methodo-step-text">On chiffre votre perte réelle avec vos données. On vérifie que votre goulot d'étranglement est bien là où on pense. <strong>Si ce n'est pas le cas, on vous le dit et on ne vous propose rien.</strong></p>
+        <p class="methodo-step-text">On chiffre votre perte réelle avec vos données. Si votre goulot n'est pas dans l'administratif, <strong>on vous le dit et on ne vous facture rien.</strong></p>
       </div>
       <div class="methodo-step">
         <div class="methodo-step-num">2</div>
         <span class="methodo-step-tag">J+2 — Document chiffré</span>
         <h3 class="methodo-step-title">Feuille de route & devis</h3>
-        <p class="methodo-step-text">Rapport 4 pages : cartographie de vos flux, euros perdus par poste, projection ROI 12 mois, proposition chiffrée. <strong>La feuille de route vous appartient.</strong> Donnez-la à votre IT si vous préférez.</p>
+        <p class="methodo-step-text">Rapport 4 pages : flux cartographiés, euros perdus par poste, projection ROI 12 mois. <strong>La feuille de route vous appartient</strong> — donnez-la à votre IT si vous préférez.</p>
       </div>
       <div class="methodo-step">
         <div class="methodo-step-num">3</div>
@@ -572,28 +478,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 <!-- ═══════════════════════════════════════
      FONDATEUR
 ═══════════════════════════════════════ -->
-<section id="fondateur" style="padding:0">
+<section class="full-section" id="fondateur" style="background:var(--navy-900);padding:0">
   <div class="fondateur-grid">
     <div class="fondateur-photo">
-      <img src="assets/img/pierre.webp"
-        alt="Pierre Andrieux — Fondateur et CEO IAgence"
-        loading="lazy" width="600" height="800" decoding="async"
-        onerror="this.style.background='#1A2B42'">
+      <img src="assets/img/pierre.webp" alt="Pierre Andrieux — Fondateur et CEO IAgence" loading="lazy" width="600" height="800" decoding="async" onerror="this.style.background='var(--navy-800)'">
       <div class="fondateur-photo-overlay"></div>
     </div>
     <div class="fondateur-text">
-      <div class="bg-grid"></div>
+      <canvas id="fondateurCanvas" aria-hidden="true"></canvas>
       <div class="fondateur-inner">
-        <div class="fondateur-creed">Architects_Creed // 001 — Mission fondateur</div>
-        <p class="fondateur-mission">
-          Ma mission : <strong>casser le cercle infernal recruter → croître → recruter</strong>, sans jamais gagner en marge.
+        <div class="section-label" style="color:var(--orange-400)">Architects Creed // 001 — Mission fondateur</div>
+        <p class="fondateur-mission" style="color:var(--navy-200)">
+          Ma mission : <strong style="color:white">casser le cercle infernal recruter → croître → recruter</strong>, sans jamais gagner en marge.
           Je collabore avec des dirigeants qui veulent une croissance différente — plus rentable, plus durable —
-          en retirant <strong>80% du répétitif</strong> pour qu'ils se concentrent sur ce qui compte vraiment :
-          <strong>vendre et délivrer.</strong>
+          en retirant <strong style="color:white">80% du répétitif</strong> pour qu'ils se concentrent sur ce qui compte vraiment :
+          <strong style="color:white">vendre et délivrer.</strong>
         </p>
         <div class="fondateur-sep"></div>
-        <div class="fondateur-name">Pierre Andrieux</div>
-        <div class="fondateur-title">Founder &amp; Lead Architect — IAgence · Essonne / Yvelines</div>
+        <div class="fondateur-name" style="color:white">Pierre Andrieux</div>
+        <div class="fondateur-title" style="color:var(--navy-400)">Founder & Lead Architect — IAgence · Essonne / Yvelines</div>
       </div>
     </div>
   </div>
@@ -601,20 +504,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
 
 <!-- ═══════════════════════════════════════
      CTA FINAL
-══════════════════════════════════════ -->
-<section id="cta-final">
-  <div class="container">
+═══════════════════════════════════════ -->
+<section class="full-section" id="cta-final" style="background:var(--neutral-0)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
     <div class="cta-box reveal">
+      <canvas id="ctaCanvas" aria-hidden="true"></canvas>
       <div class="cta-left">
-        <div class="bg-grid-warped"></div>
-        <div class="textural-overlay"></div>
         <div class="cta-left-inner">
-          <div class="sys" style="--orange:rgba(255,255,255,0.35)">
-            <span style="width:28px;height:1px;background:rgba(255,255,255,0.2);display:inline-block"></span>
+          <div class="section-label" style="color:rgba(255,255,255,0.6)">
+            <span style="width:28px;height:1px;background:rgba(255,255,255,0.3);display:inline-block;vertical-align:middle;margin-right:var(--space-2)"></span>
             Première étape
           </div>
-          <h2 class="cta-h2" style="margin-top:16px">
-            Vos conseillers<br>passent leur journée<br><span>à vendre.</span>
+          <h2 class="cta-h2">
+            Vos conseillers<br>passent leur journée<br><span class="gradient-text">à vendre.</span>
           </h2>
           <p class="cta-text">
             15 minutes avec le fondateur — on chiffre ce que vous perdez, on regarde si votre équipe peut absorber plus de volume, et on décide ensemble de la suite.<br><br>
@@ -625,39 +527,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
       <div class="cta-right">
         <div class="cta-card-title">Choisissez un créneau</div>
         <div class="cta-card-sub">15 min montre en main avec Pierre, fondateur IAgence.<br><strong>Essonne / Yvelines — appel ou déplacement possible.</strong></div>
-
-        <!-- Cal.com inline embed -->
-        <div style="margin-bottom:20px" data-cal-inline="pierre-andrieux-iagence/diagnostic-15-min"
-          data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
-
-        <!-- Fallback button -->
-        <button class="btn-book"
-          data-cal-link="pierre-andrieux-iagence/diagnostic-15-min"
-          data-cal-config='{"layout":"month_view"}'>
-          📅 Bloquer un créneau →
-        </button>
-
+        <div style="margin-bottom:var(--space-5)" data-cal-inline="pierre-andrieux-iagence/diagnostic-15-min" data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
+        <button class="btn-glow" data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" data-cal-config='{"layout":"month_view"}' style="width:100%;margin-bottom:var(--space-5)">📅 Bloquer un créneau →</button>
         <div class="cta-reassurance">
-          <div class="cta-reassurance-item">Sans engagement — 15 minutes, pas plus</div>
-          <div class="cta-reassurance-item">Vos données restent chez vous. Toujours.</div>
-          <div class="cta-reassurance-item">Si ce n'est pas votre problème, on vous le dit</div>
-          <div class="cta-reassurance-item">Garantie ROI 6 mois contractuelle</div>
+          <div class="cta-reassurance-item">✓ Sans engagement — 15 minutes, pas plus</div>
+          <div class="cta-reassurance-item">✓ Vos données restent chez vous. Toujours.</div>
+          <div class="cta-reassurance-item">✓ Si ce n'est pas votre problème, on vous le dit</div>
+          <div class="cta-reassurance-item">✓ Garantie ROI 6 mois contractuelle</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ═══════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════ -->
-<footer>
+<footer class="page-footer">
   <div class="container">
     <div class="footer-inner">
       <a href="/" class="footer-logo">
-        <img src="assets/img/logo-full.webp" alt="IAgence" height="28" width="105">
+        <img src="assets/img/logo-full.webp" alt="IAgence" height="24" width="90">
       </a>
-      <div class="footer-info">© 2025 IAgence · ia-gence.com · <a href="mentions-legales.html" style="color:inherit;text-decoration:underline">Mentions legales</a></div>
+      <div class="footer-info">© 2026 IAgence · ia-gence.com · <a href="mentions-legales.html" style="color:inherit;text-decoration:underline">Mentions légales</a></div>
       <div class="footer-status">
         <div class="status-dot"></div>
         <span class="status-text">System Nominal // All Nodes Operational</span>
@@ -665,8 +558,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 32px;height:64px;d
     </div>
   </div>
 </footer>
-
-<!-- Cal.com floating button — fourni par le script Cal.com officiel dans main.js -->
 
 <script src="assets/js/main.js" defer></script>
 </body>
