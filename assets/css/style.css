@@ -1231,3 +1231,12 @@
   .calc-capture-row { flex-direction: column; }
   .hero-actions { gap: var(--space-3); }
 }
+
+/* === NEW SOLUTIONS SECTION RESPONSIVE === */
+@media (max-width: 900px) {
+  .sol-card { grid-template-columns: 1fr !important; }
+  .sol-flow-compare { grid-template-columns: 1fr !important; gap: 0; }
+  .sol-flow-divider { padding-top: 0; transform: rotate(90deg); margin: 16px 0; }
+  .sol-card-left { padding: 32px 24px; }
+  .sol-card-right { padding: 32px 24px; }
+}
