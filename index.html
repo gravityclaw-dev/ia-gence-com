@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0F1B2D">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IAgence — Agents IA pour distributeurs industriels B2B</title>
 <meta name="description" content="Agents IA déployés sur votre machine Windows en 12 jours. Vos conseillers arrêtent de chercher des références et passent leur journée à vendre. Garantie ROI 6 mois.">
 <link rel="canonical" href="https://ia-gence.com/">
@@ -12,23 +11,31 @@
 <meta property="og:url" content="https://ia-gence.com/">
 <meta property="og:title" content="IAgence — Vos conseillers cherchent au lieu de vendre. On corrige ça.">
 <meta property="og:description" content="Agents IA sur votre machine Windows. 12 jours. Zéro cloud. ROI constaté x3 chez nos clients.">
-  <meta property="og:image" content="https://ia-gence.com/assets/img/og-image.webp">
-  <meta name="twitter:image" content="https://ia-gence.com/assets/img/og-image.webp">
-  <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://ia-gence.com/assets/img/og-image.jpg">
+<meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/img/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
-<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/logo-mini.webp" type="image/webp">
+<link rel="apple-touch-icon" href="/assets/img/logo-mini.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://app.cal.com">
-  <link rel="preconnect" href="https://app.cal.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/logo-full.webp" type="image/webp">
 
-<link rel="stylesheet" href="assets/css/design-tokens.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<!-- Critical CSS — Design Tokens + Essential -->
+<style>
+:root{--orange-50:#FFF4ED;--orange-100:#FFE4D1;--orange-200:#FFC9A3;--orange-300:#FFA366;--orange-400:#FF7D33;--orange-500:#FF5C00;--orange-600:#CC4A00;--orange-700:#993700;--orange-800:#662500;--navy-50:#F0F4F8;--navy-100:#D9E2EC;--navy-200:#BCCCDC;--navy-300:#9FB3C8;--navy-400:#627D98;--navy-500:#486581;--navy-600:#334E68;--navy-700:#243B53;--navy-800:#1A2B42;--navy-900:#0F1B2D;--neutral-0:#FFFFFF;--neutral-50:#FAFAFA;--neutral-100:#F5F5F5;--neutral-200:#E5E5E5;--neutral-300:#D4D4D4;--neutral-400:#A3A3A3;--neutral-500:#737373;--neutral-600:#525252;--neutral-700:#404040;--neutral-800:#262626;--neutral-900:#171717;--success:#10B981;--warning:#F59E0B;--error:#EF4444;--orange-glow:rgba(255,92,0,0.35);--navy-glow:rgba(26,43,66,0.3);--gradient-brand:linear-gradient(135deg,#FF5C00 0%,#CC4A00 40%,#334E68 70%,#1A2B42 100%);--gradient-brand-text:linear-gradient(135deg,#FF5C00,#FFA366);--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-8:48px;--space-10:64px;--space-12:80px;--space-16:96px;--space-20:128px;--ease-out:cubic-bezier(0.25,0.1,0.25,1);--ease-in-out:cubic-bezier(0.4,0,0.2,1);--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neutral-0);line-height:1.625;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+@media(max-width:768px){.container{padding:0 20px}}
+@media(max-width:480px){.container{padding:0 16px}}
+</style>
+
+<link rel="stylesheet" href="assets/css/design-tokens.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/css/design-tokens.css"><link rel="stylesheet" href="assets/css/style.css"></noscript>
 
 <script type="application/ld+json">
 {
@@ -60,26 +67,25 @@
 </script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-  <div id="main-content">
-    <!-- Cursor Spotlight -->
-    <div class="cursor-spotlight cursor-spotlight-light" id="cursorSpotlight" aria-hidden="true"></div>
 
-    <!-- Section Dots -->
-    <nav class="section-dots" id="sectionDots" aria-label="Navigation par sections">
-      <button class="section-dot active" data-section="0" title="Hero" aria-label="Section Hero"></button>
-      <button class="section-dot" data-section="1" title="Calculateur" aria-label="Section Calculateur"></button>
-      <button class="section-dot" data-section="2" title="Solutions" aria-label="Section Solutions"></button>
-      <button class="section-dot" data-section="3" title="Garantie" aria-label="Section Garantie"></button>
-      <button class="section-dot" data-section="4" title="Résultats" aria-label="Section Résultats"></button>
-      <button class="section-dot" data-section="5" title="Méthode" aria-label="Section Méthode"></button>
-      <button class="section-dot" data-section="6" title="Fondateur" aria-label="Section Fondateur"></button>
-        </nav>
+<!-- Cursor Spotlight -->
+<div class="cursor-spotlight cursor-spotlight-light" id="cursorSpotlight" aria-hidden="true"></div>
+
+<!-- Section Dots -->
+<nav class="section-dots" id="sectionDots" aria-label="Navigation par sections">
+  <button class="section-dot active" data-section="0" title="Hero" aria-label="Section Hero"></button>
+  <button class="section-dot" data-section="1" title="Calculateur" aria-label="Section Calculateur"></button>
+  <button class="section-dot" data-section="2" title="Solutions" aria-label="Section Solutions"></button>
+  <button class="section-dot" data-section="3" title="Garantie" aria-label="Section Garantie"></button>
+  <button class="section-dot" data-section="4" title="Résultats" aria-label="Section Résultats"></button>
+  <button class="section-dot" data-section="5" title="Méthode" aria-label="Section Méthode"></button>
+  <button class="section-dot" data-section="6" title="Fondateur" aria-label="Section Fondateur"></button>
+</nav>
 
 <!-- ═══════════════════════════════════════
      MOBILE NAV
 ══════════════════════════════════════ -->
-<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+<div class="mobile-nav" id="mobile-nav">
   <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
   <div class="mobile-nav-links">
     <a href="#calculateur" class="mobile-nav-link" onclick="closeMobileNav()">Calculateur</a>
@@ -98,7 +104,7 @@
 ══════════════════════════════════════ -->
 <header class="top-nav" id="topNav">
   <a href="/" class="nav-logo">
-    <img src="assets/img/logo-full-400.webp" srcset="assets/img/logo-full-200.webp 200w, assets/img/logo-full-400.webp 400w, assets/img/logo-full.webp 1000w" sizes="(max-width: 768px) 100vw, 105px" alt="IAgence" height="28" width="105">
+    <img src="assets/img/logo-full.webp" alt="IAgence" height="28" width="105">
   </a>
   <nav class="nav-links" aria-label="Navigation principale">
     <a href="#calculateur">Calculateur</a>
@@ -110,7 +116,7 @@
       DIAGNOSTIC 15 MIN
     </a>
   </nav>
-  <button class="hamburger" onclick="openMobileNav()" aria-label="Menu" aria-expanded="false">
+  <button class="hamburger" onclick="openMobileNav()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </header>
@@ -128,7 +134,7 @@
       Agents IA autonomes · Déployés en 12 jours
     </div>
     <h1>Vos équipes travaillent dur. Mais plus sur les bonnes tâches.</h1>
-    <p>Prospection lente, devis qui traînent, SAV qui déborde, vos équipes perdent 3 à 4 heures par jour sur des tâches nécessaires hier, sans valeur à l'ère de l'IA. Certains de vos concurrents automatisent déjà. Ils accélèrent leur croissance et leur marge sans recruter.</p>
+    <p>Prospection lente, devis qui traînent, SAV qui déborde, vos équipes perdent 3 à 4 heures par jour sur des tâches nécessaires hier, sans valeur à l'ére de l'IA. Certains de vos concurrents automatisent déjà. Ils accélèrent leur croissance et leur marge sans recruter.</p>
     <div class="hero-actions">
       <a href="#calculateur" class="hero-cta">Calculer ma perte →</a>
       <div class="hero-badge-sub">Déployé sur <span>votre machine</span> — zéro donnée dans le cloud</div>
@@ -198,7 +204,7 @@
           <div class="calc-input-row">
             <div class="calc-val" id="nb-display">6</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="nb-slider" class="slider-glow" min="1" max="20" value="6" aria-valuemin="1" aria-valuemax="20" aria-valuenow="6" aria-label="Nombre de conseillers">
+              <input type="range" id="nb-slider" class="slider-glow" min="1" max="20" value="6" aria-label="Nombre de conseillers">
               <div class="calc-hint">Tous ceux qui passent du temps sur autre chose que vendre ou délivrer</div>
             </div>
           </div>
@@ -208,7 +214,7 @@
           <div class="calc-input-row">
             <div class="calc-val" id="h-display">2h</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="h-slider" class="slider-glow" min="1" max="6" value="2" step="0.5" aria-valuemin="1" aria-valuemax="6" aria-valuenow="2" aria-label="Heures perdues par jour">
+              <input type="range" id="h-slider" class="slider-glow" min="1" max="6" value="2" step="0.5" aria-label="Heures perdues par jour">
               <div class="calc-hint">PDF fournisseurs, ressaisie ERP, mails SAV, relances manuelles</div>
             </div>
           </div>
@@ -218,7 +224,7 @@
           <div class="calc-input-row">
             <div class="calc-val" id="taux-display">35€</div>
             <div class="calc-slider-wrap">
-              <input type="range" id="taux-slider" class="slider-glow" min="28" max="55" value="35" step="1" aria-valuemin="28" aria-valuemax="55" aria-valuenow="35" aria-label="Coût horaire chargé">
+              <input type="range" id="taux-slider" class="slider-glow" min="28" max="55" value="35" step="1" aria-label="Coût horaire chargé">
               <div class="calc-hint">Base chargée — inclut cotisations, mutuelle, espace de travail</div>
             </div>
           </div>
@@ -255,234 +261,232 @@
 <!-- ═══════════════════════════════════════
      SOLUTIONS / AXES
 ══════════════════════════════════════ -->
-<section class="full-section" id="solutions">
-  <div class="sol-section">
-    <div class="sol-container">
+<section class="full-section" id="solutions" style="background:var(--neutral-0);padding:0">
+  <div class="sol-section" style="background:var(--neutral-0);padding:100px 32px">
+    <div class="sol-container" style="max-width:1200px;margin:0 auto">
       <div>
         <div class="section-label">Solutions IA sur mesure</div>
         <h2 class="section-title">Trois goulots d'étranglement.<br><span class="gradient-text">Trois agents autonomes.</span></h2>
         <p class="section-desc">Installés sur votre PC Windows en 12 jours. Sans cloud, sans formation, sans toucher à votre ERP. L'agent prépare — votre équipe décide.</p>
       </div>
 
-      <div class="sol-cards">
-
-        <!-- AGENT 01 — Prospection Commerciale -->
-        <div class="sol-card">
-          <div class="sol-card-left">
+      <div class="sol-cards" style="display:flex;flex-direction:column;gap:24px">
+        <div class="sol-card" style="display:grid;grid-template-columns:320px 1fr;border:1px solid var(--neutral-200);border-radius:20px;overflow:hidden;background:var(--neutral-0);transition:border-color 0.25s,box-shadow 0.25s;position:relative">
+          <div class="sol-card-left" style="background:var(--navy-900);padding:40px 36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
             <div>
-              <div class="sol-agent-num">Agent 01 / 03</div>
-              <div class="sol-agent-name">Prospection<br>Commerciale</div>
-              <div class="sol-perte-block">
-                <div class="sol-perte-label">Vous perdez actuellement</div>
-                <div class="sol-perte-chiffre">12h+<span>/semaine</span></div>
-                <div class="sol-perte-desc">à chercher, analyser, rédiger — pendant que vos concurrents décrochent le téléphone.</div>
+              <div class="sol-agent-num" style="font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--orange-500);text-transform:uppercase;margin-bottom:16px">Agent 01 / 03</div>
+              <div class="sol-agent-name" style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;line-height:1.2;margin-bottom:20px">Prospection<br>Commerciale</div>
+              <div class="sol-perte-block" style="background:rgba(255,92,0,0.1);border:1px solid rgba(255,92,0,0.2);border-radius:12px;padding:16px 18px;margin-bottom:28px">
+                <div class="sol-perte-label" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--orange-400);text-transform:uppercase;margin-bottom:6px">Vous perdez actuellement</div>
+                <div class="sol-perte-chiffre" style="font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--orange-400);line-height:1">12h+<span style="font-size:15px;font-weight:500">/semaine</span></div>
+                <div class="sol-perte-desc" style="font-size:12px;color:var(--navy-300);margin-top:4px;line-height:1.4">à chercher, analyser, rédiger — pendant que vos concurrents décrochent le téléphone.</div>
               </div>
             </div>
-            <div class="sol-gain">
-              <div class="sol-gain-icon">
-                <svg viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="sol-gain" style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px">
+              <div class="sol-gain-icon" style="width:28px;height:28px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg viewBox="0 0 14 14" fill="none" style="width:14px;height:14px"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <div class="sol-gain-text">5 prospects qualifiés chaque matin — zéro recherche manuelle</div>
+              <div class="sol-gain-text" style="font-size:13px;color:#34d399;line-height:1.3;font-weight:500">5 prospects qualifiés chaque matin — zéro recherche manuelle</div>
             </div>
           </div>
-          <div class="sol-card-right">
-            <div class="sol-flow-title">// Flux de travail — Avant / Après agent</div>
-            <div class="sol-flow-compare">
+          <div class="sol-card-right" style="padding:40px 40px;display:flex;flex-direction:column;justify-content:center">
+            <div class="sol-flow-title" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--neutral-400);margin-bottom:24px">// Flux de travail — Avant / Après agent</div>
+            <div class="sol-flow-compare" style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch">
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label before"><span class="col-dot before"></span>Sans agent</div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-flow-col-label before" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:#ef4444"><span class="col-dot before" style="width:7px;height:7px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>Sans agent</div>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Cherche manuellement sur Google + LinkedIn
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Parcourt les sites un par un, prend des notes
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Rédige un angle d'accroche — ou abandonne
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Rappelle "demain quand j'aurai le temps"
                 </div>
-                <span class="sol-time-tag before">⏱ 1h30 par prospect</span>
+                <span class="sol-time-tag before" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#fee2e2;color:#b91c1c">⏱ 1h30 par prospect</span>
               </div>
-              <div class="sol-flow-divider">
-                <div class="sol-arrow-circle">→</div>
+              <div class="sol-flow-divider" style="display:flex;align-items:center;justify-content:center;padding-top:36px">
+                <div class="sol-arrow-circle" style="width:36px;height:36px;border-radius:50%;background:var(--orange-500);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;box-shadow:0 4px 12px rgba(255,92,0,0.3)">→</div>
               </div>
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label after"><span class="col-dot after"></span>Avec l'agent</div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-flow-col-label after" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:var(--success)"><span class="col-dot after" style="width:7px;height:7px;border-radius:50%;background:var(--success);flex-shrink:0"></span>Avec l'agent</div>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Ratisse votre zone la nuit — secteur, taille, signaux
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Fiche prospect : activité, besoins, objections anticipées
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Angle d'accroche rédigé, prêt à envoyer
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Votre commercial décroche — il sait déjà à qui il parle
                 </div>
-                <span class="sol-time-tag after">⚡ 2 min par prospect</span>
+                <span class="sol-time-tag after" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#d1fae5;color:#065f46">⚡ 2 min par prospect</span>
               </div>
             </div>
-            <div class="sol-result-strip">
-              <strong>÷45</strong> le temps de préparation prospect — chiffré au diagnostic sur vos données réelles
+            <div class="sol-result-strip" style="margin-top:24px;padding:14px 18px;background:linear-gradient(135deg,var(--navy-800),var(--navy-900));border-radius:12px;font-size:14px;color:var(--navy-200);display:flex;align-items:center;gap:10px">
+              <strong style="color:var(--orange-400);font-family:var(--font-display);font-size:18px;font-weight:700">÷45</strong> le temps de préparation prospect — chiffré au diagnostic sur vos données réelles
             </div>
           </div>
         </div>
 
-        <!-- AGENT 02 — Catalogue, Devis & ADV -->
-        <div class="sol-card">
-          <div class="sol-card-left">
+        <div class="sol-card" style="display:grid;grid-template-columns:320px 1fr;border:1px solid var(--neutral-200);border-radius:20px;overflow:hidden;background:var(--neutral-0);transition:border-color 0.25s,box-shadow 0.25s;position:relative">
+          <div class="sol-card-left" style="background:var(--navy-900);padding:40px 36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
             <div>
-              <div class="sol-agent-num">Agent 02 / 03</div>
-              <div class="sol-agent-name">Catalogue,<br>Devis & ADV</div>
-              <div class="sol-perte-block">
-                <div class="sol-perte-label">Vous perdez actuellement</div>
-                <div class="sol-perte-chiffre">15 min<span> par devis</span></div>
-                <div class="sol-perte-desc">à fouiller un PDF de 400 pages, recouper le stock Sage, recalculer les remises. Le client attend.</div>
+              <div class="sol-agent-num" style="font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--orange-500);text-transform:uppercase;margin-bottom:16px">Agent 02 / 03</div>
+              <div class="sol-agent-name" style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;line-height:1.2;margin-bottom:20px">Catalogue,<br>Devis & ADV</div>
+              <div class="sol-perte-block" style="background:rgba(255,92,0,0.1);border:1px solid rgba(255,92,0,0.2);border-radius:12px;padding:16px 18px;margin-bottom:28px">
+                <div class="sol-perte-label" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--orange-400);text-transform:uppercase;margin-bottom:6px">Vous perdez actuellement</div>
+                <div class="sol-perte-chiffre" style="font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--orange-400);line-height:1">15 min<span style="font-size:15px;font-weight:500"> par devis</span></div>
+                <div class="sol-perte-desc" style="font-size:12px;color:var(--navy-300);margin-top:4px;line-height:1.4">à fouiller un PDF de 400 pages, recouper le stock Sage, recalculer les remises. Le client attend.</div>
               </div>
             </div>
-            <div class="sol-gain">
-              <div class="sol-gain-icon">
-                <svg viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="sol-gain" style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px">
+              <div class="sol-gain-icon" style="width:28px;height:28px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg viewBox="0 0 14 14" fill="none" style="width:14px;height:14px"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <div class="sol-gain-text">Référence + prix remisé + devis pré-rempli en 30 secondes</div>
+              <div class="sol-gain-text" style="font-size:13px;color:#34d399;line-height:1.3;font-weight:500">Référence + prix remisé + devis pré-rempli en 30 secondes</div>
             </div>
           </div>
-          <div class="sol-card-right">
-            <div class="sol-flow-title">// Flux de travail — Avant / Après agent</div>
-            <div class="sol-flow-compare">
+          <div class="sol-card-right" style="padding:40px 40px;display:flex;flex-direction:column;justify-content:center">
+            <div class="sol-flow-title" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--neutral-400);margin-bottom:24px">// Flux de travail — Avant / Après agent</div>
+            <div class="sol-flow-compare" style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch">
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label before"><span class="col-dot before"></span>Sans agent</div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-flow-col-label before" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:#ef4444"><span class="col-dot before" style="width:7px;height:7px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>Sans agent</div>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Fouille le PDF fournisseur — 400 pages, référence inconnue
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Vérifie le stock dans Sage / EBP / Cegid
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Recalcule la remise selon la grille client
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Ressaisit tout dans le devis — risque d'erreur
                 </div>
-                <span class="sol-time-tag before">⏱ 15 min par devis</span>
+                <span class="sol-time-tag before" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#fee2e2;color:#b91c1c">⏱ 15 min par devis</span>
               </div>
-              <div class="sol-flow-divider">
-                <div class="sol-arrow-circle">→</div>
+              <div class="sol-flow-divider" style="display:flex;align-items:center;justify-content:center;padding-top:36px">
+                <div class="sol-arrow-circle" style="width:36px;height:36px;border-radius:50%;background:var(--orange-500);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;box-shadow:0 4px 12px rgba(255,92,0,0.3)">→</div>
               </div>
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label after"><span class="col-dot after"></span>Avec l'agent</div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-flow-col-label after" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:var(--success)"><span class="col-dot after" style="width:7px;height:7px;border-radius:50%;background:var(--success);flex-shrink:0"></span>Avec l'agent</div>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Catalogues indexés en local — recherche sémantique instantanée
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Stock temps réel + remise client calculée automatiquement
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Devis pré-rempli exporté vers votre ERP
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Votre conseiller valide et envoie — ressaisie zéro
                 </div>
-                <span class="sol-time-tag after">⚡ 30 sec par devis</span>
+                <span class="sol-time-tag after" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#d1fae5;color:#065f46">⚡ 30 sec par devis</span>
               </div>
             </div>
-            <div class="sol-result-strip">
-              <strong>÷10</strong> le temps de qualification devis — constaté chez ADCA (Égly, 91) en 4 mois
+            <div class="sol-result-strip" style="margin-top:24px;padding:14px 18px;background:linear-gradient(135deg,var(--navy-800),var(--navy-900));border-radius:12px;font-size:14px;color:var(--navy-200);display:flex;align-items:center;gap:10px">
+              <strong style="color:var(--orange-400);font-family:var(--font-display);font-size:18px;font-weight:700">÷10</strong> le temps de qualification devis — constaté chez ADCA (Égly, 91) en 4 mois
             </div>
           </div>
         </div>
 
-        <!-- AGENT 03 — SAV & Litiges -->
-        <div class="sol-card">
-          <div class="sol-card-left">
+        <div class="sol-card" style="display:grid;grid-template-columns:320px 1fr;border:1px solid var(--neutral-200);border-radius:20px;overflow:hidden;background:var(--neutral-0);transition:border-color 0.25s,box-shadow 0.25s;position:relative">
+          <div class="sol-card-left" style="background:var(--navy-900);padding:40px 36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
             <div>
-              <div class="sol-agent-num">Agent 03 / 03</div>
-              <div class="sol-agent-name">SAV &<br>Litiges</div>
-              <div class="sol-perte-block">
-                <div class="sol-perte-label">Vous perdez actuellement</div>
-                <div class="sol-perte-chiffre">1h45<span>/personne/jour</span></div>
-                <div class="sol-perte-desc">à copier-coller les mêmes réponses SAV — suivi commande, accusé réception, relance fournisseur.</div>
+              <div class="sol-agent-num" style="font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--orange-500);text-transform:uppercase;margin-bottom:16px">Agent 03 / 03</div>
+              <div class="sol-agent-name" style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;line-height:1.2;margin-bottom:20px">SAV &<br>Litiges</div>
+              <div class="sol-perte-block" style="background:rgba(255,92,0,0.1);border:1px solid rgba(255,92,0,0.2);border-radius:12px;padding:16px 18px;margin-bottom:28px">
+                <div class="sol-perte-label" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;color:var(--orange-400);text-transform:uppercase;margin-bottom:6px">Vous perdez actuellement</div>
+                <div class="sol-perte-chiffre" style="font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--orange-400);line-height:1">1h45<span style="font-size:15px;font-weight:500">/personne/jour</span></div>
+                <div class="sol-perte-desc" style="font-size:12px;color:var(--navy-300);margin-top:4px;line-height:1.4">à copier-coller les mêmes réponses SAV — suivi commande, accusé réception, relance fournisseur.</div>
               </div>
             </div>
-            <div class="sol-gain">
-              <div class="sol-gain-icon">
-                <svg viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="sol-gain" style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px">
+              <div class="sol-gain-icon" style="width:28px;height:28px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg viewBox="0 0 14 14" fill="none" style="width:14px;height:14px"><path d="M2 7l3.5 3.5L12 3" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <div class="sol-gain-text">80% des mails SAV traités automatiquement — litiges remontés immédiatement</div>
+              <div class="sol-gain-text" style="font-size:13px;color:#34d399;line-height:1.3;font-weight:500">80% des mails SAV traités automatiquement — litiges remontés immédiatement</div>
             </div>
           </div>
-          <div class="sol-card-right">
-            <div class="sol-flow-title">// Flux de travail — Avant / Après agent</div>
-            <div class="sol-flow-compare">
+          <div class="sol-card-right" style="padding:40px 40px;display:flex;flex-direction:column;justify-content:center">
+            <div class="sol-flow-title" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--neutral-400);margin-bottom:24px">// Flux de travail — Avant / Après agent</div>
+            <div class="sol-flow-compare" style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch">
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label before"><span class="col-dot before"></span>Sans agent</div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-flow-col-label before" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:#ef4444"><span class="col-dot before" style="width:7px;height:7px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>Sans agent</div>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Ouvre chaque mail, identifie le type manuellement
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Cherche la commande dans le système, copie-colle
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Rédige une réponse depuis zéro — même contenu chaque jour
                 </div>
-                <div class="sol-step before">
-                  <span class="sol-step-icon before">✕</span>
+                <div class="sol-step before" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#fef2f2;color:var(--neutral-700);border:1px solid #fee2e2">
+                  <span class="sol-step-icon before" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#fee2e2;color:#ef4444">✕</span>
                   Les vrais litiges se noient dans le flux — réponse tardive
                 </div>
-                <span class="sol-time-tag before">⏱ 1h45 par personne/jour</span>
+                <span class="sol-time-tag before" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#fee2e2;color:#b91c1c">⏱ 1h45 par personne/jour</span>
               </div>
-              <div class="sol-flow-divider">
-                <div class="sol-arrow-circle">→</div>
+              <div class="sol-flow-divider" style="display:flex;align-items:center;justify-content:center;padding-top:36px">
+                <div class="sol-arrow-circle" style="width:36px;height:36px;border-radius:50%;background:var(--orange-500);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;flex-shrink:0;box-shadow:0 4px 12px rgba(255,92,0,0.3)">→</div>
               </div>
               <div class="sol-flow-col">
-                <div class="sol-flow-col-label after"><span class="col-dot after"></span>Avec l'agent</div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-flow-col-label after" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px;color:var(--success)"><span class="col-dot after" style="width:7px;height:7px;border-radius:50%;background:var(--success);flex-shrink:0"></span>Avec l'agent</div>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Mail classifié en 3 sec — suivi, litige, info, réclamation
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Brouillon réponse généré : ton adapté, N° commande récupéré
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Votre équipe clique "envoyer" — validation humaine sur tout
                 </div>
-                <div class="sol-step after">
-                  <span class="sol-step-icon after">✓</span>
+                <div class="sol-step after" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.4;background:#f0fdf4;color:var(--neutral-700);border:1px solid #bbf7d0">
+                  <span class="sol-step-icon after" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;margin-top:1px;background:#bbf7d0;color:#16a34a">✓</span>
                   Litiges remontés en priorité — visibles immédiatement
                 </div>
-                <span class="sol-time-tag after">⚡ Temps SAV ÷4</span>
+                <span class="sol-time-tag after" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;background:#d1fae5;color:#065f46">⚡ Temps SAV ÷4</span>
               </div>
             </div>
-            <div class="sol-result-strip">
-              <strong>27 250 €</strong> économisés en 6 mois — NOVIPACK (Massy, 91) · 4 000 commandes/an fluidifiées
+            <div class="sol-result-strip" style="margin-top:24px;padding:14px 18px;background:linear-gradient(135deg,var(--navy-800),var(--navy-900));border-radius:12px;font-size:14px;color:var(--navy-200);display:flex;align-items:center;gap:10px">
+              <strong style="color:var(--orange-400);font-family:var(--font-display);font-size:18px;font-weight:700">27 250 €</strong> économisés en 6 mois — NOVIPACK (Massy, 91) · 4 000 commandes/an fluidifiées
             </div>
           </div>
         </div>
 
       </div>
+
+
     </div>
   </div>
 </section>
@@ -543,7 +547,7 @@
     </div>
     <div class="temo-grid reveal reveal-delay-1">
       <div class="temo-card">
-        <img src="assets/img/logo-adca-400.webp" srcset="assets/img/logo-adca-200.webp 200w, assets/img/logo-adca-400.webp 400w, assets/img/logo-adca.webp 1000w" sizes="(max-width: 768px) 100vw, 200px" alt="ADCA" loading="lazy" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
+        <img src="assets/img/logo-adca.webp" alt="ADCA" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
         <span class="temo-sector">Contrôle-commande électrique · Égly (91)</span>
         <div class="temo-quote">
           "Nos équipes techniques perdaient 30% de leur semaine à fouiller les historiques fournisseurs pour chiffrer les équipements. Pierre a compris qu'on voulait une solution terrain, pas une usine à gaz. <em>On a divisé par deux notre temps de qualification sur les devis complexes. Sur des appels d'offres serrés, c'est ce qui fait la différence.</em>"
@@ -556,7 +560,7 @@
         <div class="temo-author"><strong>Damien Capai</strong> — DG délégué · ADCA · 24 salariés</div>
       </div>
       <div class="temo-card">
-        <img src="assets/img/logo-novipack-400.webp" srcset="assets/img/logo-novipack-200.webp 200w, assets/img/logo-novipack-400.webp 400w, assets/img/logo-novipack.webp 1000w" sizes="(max-width: 768px) 100vw, 200px" alt="NOVIPACK" loading="lazy" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
+        <img src="assets/img/logo-novipack.webp" alt="NOVIPACK" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
         <span class="temo-sector">Films d'emballage & location machines · Massy (91)</span>
         <div class="temo-quote">
           "4 000 commandes par an et un parc machines en location — notre goulot n'était pas la vente, c'était l'asphyxie opérationnelle. Pierre est arrivé en chirurgien, pas en vendeur de tech. <em>On a fluidifié le SAV, réduit les erreurs de saisie, et retrouvé la réactivité qui fait notre force depuis 40 ans.</em>"
@@ -608,23 +612,23 @@
 <!-- ═══════════════════════════════════════
      FONDATEUR
 ══════════════════════════════════════ -->
-<section class="full-section" id="fondateur">
+<section class="full-section" id="fondateur" style="background:var(--navy-900);padding:0">
   <div class="fondateur-grid">
     <div class="fondateur-photo">
-      <img src="assets/img/pierre-800.webp" srcset="assets/img/pierre-400.webp 400w, assets/img/pierre-800.webp 800w, assets/img/pierre-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 400px" alt="Pierre Andrieux — Fondateur et CEO IAgence" loading="lazy" width="600" height="800" decoding="async" onerror="this.style.background='var(--navy-800)'">
+      <img src="assets/img/pierre.webp" alt="Pierre Andrieux — Fondateur et CEO IAgence" loading="lazy" width="600" height="800" decoding="async" onerror="this.style.background='var(--navy-800)'">
       <div class="fondateur-photo-overlay"></div>
     </div>
     <div class="fondateur-text">
       <canvas id="fondateurCanvas" aria-hidden="true"></canvas>
         <div class="fondateur-inner">
-          <div class="fondateur-mission-label">Mission</div>
-          <p class="fondateur-mission">
-            Les règles de l'industrie ont changé. Ceux qui tournent avec les méthodes d'hier se feront avaler par ceux qui automatisent aujourd'hui. L'inaction n'est plus un choix, c'est une perte sèche qui ne cesse de croître sur vos bilans mensuels. Vous avez l'outil de production et le savoir-faire. Je vous apporte <strong>la puissance d'exécution.</strong>
-          </p>
-          <div class="fondateur-sep"></div>
-          <div class="fondateur-name">Pierre Andrieux</div>
-          <div class="fondateur-title">Fondateur & architecte IA — IAgence</div>
-        </div>
+<div style="color:var(--orange-400);font-size:var(--space-4);font-weight:700;text-transform:uppercase;letter-spacing:0.1em">Mission</div>
+        <p class="fondateur-mission" style="color:var(--navy-200)">
+          Les règles de l'industrie ont changé. Ceux qui tournent avec les méthodes d'hier se feront avaler par ceux qui automatisent aujourd'hui. L'inaction n'est plus un choix, c'est une perte sèche qui ne cesse de croître sur vos bilans mensuels. Vous avez l'outil de production et le savoir-faire. Je vous apporte <strong style="color:white">la puissance d'exécution.</strong>
+        </p>
+        <div class="fondateur-sep"></div>
+        <div class="fondateur-name" style="color:white">Pierre Andrieux</div>
+        <div class="fondateur-title" style="color:var(--navy-400)">Fondateur & architecte IA — IAgence</div>
+      </div>
     </div>
   </div>
 </section>
@@ -632,14 +636,14 @@
 <!-- ═══════════════════════════════════════
      CTA FINAL
 ══════════════════════════════════════ -->
-<section class="full-section" id="cta-final">
-  <div class="section section-cta">
+<section class="full-section" id="cta-final" style="background:var(--neutral-0)">
+  <div class="section" style="padding-top:var(--space-20);padding-bottom:var(--space-20)">
     <div class="cta-box reveal">
       <canvas id="ctaCanvas" aria-hidden="true"></canvas>
       <div class="cta-left">
         <div class="cta-left-inner">
-          <div class="section-label section-label-light">
-            <span class="label-line"></span>
+          <div class="section-label" style="color:rgba(255,255,255,0.6)">
+            <span style="width:28px;height:1px;background:rgba(255,255,255,0.3);display:inline-block;vertical-align:middle;margin-right:var(--space-2)"></span>
             Première étape
           </div>
           <h2 class="cta-h2">
@@ -654,8 +658,8 @@
       <div class="cta-right">
         <div class="cta-card-title">Choisissez un créneau</div>
         <div class="cta-card-sub">15 min avec Pierre Andrieux, fondateur IAgence.<br><strong>Appel Gratuit.</strong></div>
-        <div class="cta-calendar" data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
-        <a data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" class="btn-glow btn-glow-full">Bloquer un créneau →</a>
+        <div style="margin-bottom:var(--space-5)" data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" data-cal-config='{"layout":"month_view","styles":{"branding":{"brandColor":"#FF5C00"}}}'></div>
+        <a data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" class="btn-glow" style="width:100%;margin-bottom:var(--space-5)">Bloquer un créneau →</a>
         <div class="cta-reassurance">
           <div class="cta-reassurance-item">✓ Sans engagement — 15 minutes, pas plus</div>
           <div class="cta-reassurance-item">✓ Vos données restent chez vous. Toujours.</div>
@@ -675,7 +679,7 @@
   <div class="container">
     <div class="footer-inner">
       <a href="/" class="footer-logo">
-        <img src="assets/img/logo-full-400.webp" srcset="assets/img/logo-full-200.webp 200w, assets/img/logo-full-400.webp 400w, assets/img/logo-full.webp 1000w" sizes="(max-width: 768px) 100vw, 90px" alt="IAgence" height="24" width="90">
+        <img src="assets/img/logo-full.webp" alt="IAgence" height="24" width="90">
       </a>
       <div class="footer-info">© 2026 IAgence · ia-gence.com · <a href="mentions-legales.html" rel="nofollow" style="color:inherit;text-decoration:underline">Mentions légales</a></div>
       <div class="footer-status">
@@ -686,53 +690,15 @@
   </div>
 </footer>
 
-  </div> <!-- /#main-content -->
+<!-- Cal floating phone button -->
+<button class="cal-float-button" id="calFloatBtn" aria-label="Prendre rendez-vous — Diagnostic gratuit 15 min" title="Diagnostic gratuit 15 min avec Pierre">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.05 2a7 7 0 0 1 7.95 7.95" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    <path d="M14.05 6a3 3 0 0 1 3.95 3.95" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  </svg>
+</button>
 
-  <!-- Cal.com floating phone button -->
-  <button class="cal-float-button" id="calFloatBtn" aria-label="Prendre rendez-vous — Diagnostic gratuit 15 min" title="Diagnostic gratuit 15 min avec Pierre">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M14.05 2a7 7 0 0 1 7.95 7.95" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
-      <path d="M14.05 6a3 3 0 0 1 3.95 3.95" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-    </svg>
-  </button>
-
-  <!-- Cal.com embed script -->
-  <script type="text/javascript">
-  (function (C, A, L) {
-    let p = function (a, ar) { a.q.push(ar); };
-    let d = C.document;
-    C.Cal = C.Cal || function () {
-      let cal = C.Cal;
-      let ar = arguments;
-      if (!cal.loaded) {
-        cal.ns = {};
-        cal.q = cal.q || [];
-        d.head.appendChild(d.createElement("script")).src = A;
-        cal.loaded = true;
-      }
-      if (ar[0] === L) {
-        const api = function () { p(api, arguments); };
-        const namespace = ar[1];
-        api.q = api.q || [];
-        if (typeof namespace === "string") {
-          cal.ns[namespace] = cal.ns[namespace] || api;
-          p(cal.ns[namespace], ar);
-          p(cal, ["initNamespace", namespace]);
-        } else p(cal, ar);
-        return;
-      }
-      p(cal, ar);
-    };
-  })(window, "https://app.cal.com/embed/embed.js", "init");
-
-  Cal("init", "diagnostic-15-min", { origin: "https://app.cal.com" });
-  Cal.ns["diagnostic-15-min"]("ui", {
-    "hideEventTypeDetails": false,
-    "layout": "week_view"
-  });
-  </script>
-
-<script src="assets/js/main.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
