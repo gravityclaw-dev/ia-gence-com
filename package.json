@@ -1,0 +1,14 @@
+{
+  "name": "ia-gence-com",
+  "version": "1.0.0",
+  "description": "Site web IAgence - Production Build",
+  "scripts": {
+    "build:js": "esbuild assets/js/main.js --minify --outfile=assets/js/main.min.js",
+    "build:css": "esbuild assets/css/style.css --minify --outfile=assets/css/style.min.css",
+    "build": "npm run build:js && npm run build:css",
+    "watch": "esbuild assets/js/main.js --outfile=assets/js/main.min.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

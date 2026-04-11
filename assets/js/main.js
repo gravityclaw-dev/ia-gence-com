@@ -24,6 +24,10 @@
     document.getElementById('h-display').textContent = h + 'h';
     document.getElementById('taux-display').textContent = taux + '€';
 
+    document.getElementById('nb-slider').setAttribute('aria-valuenow', nb);
+    document.getElementById('h-slider').setAttribute('aria-valuenow', h);
+    document.getElementById('taux-slider').setAttribute('aria-valuenow', taux);
+
     document.getElementById('total-display').textContent = perteFormatted;
     document.getElementById('bd-heures').textContent = heuresFormatted;
     document.getElementById('bd-taux').textContent = taux + ' €/h';
@@ -36,57 +40,13 @@
   document.getElementById('taux-slider').addEventListener('input', updateCalc);
   updateCalc();
 
-  // ===== EMAIL CAPTURE =====
-  window.submitCalcEmail = function() {
-    var email = document.getElementById('calc-email').value;
-    if (!email || !email.includes('@')) {
-      document.getElementById('calc-email').classList.add('error');
-      return;
-    }
-    document.getElementById('calc-email').classList.remove('error');
-    document.getElementById('calc-capture-form').style.display = 'none';
-    document.getElementById('calc-thanks').style.display = 'block';
+// ===== EMAIL CAPTURE =====
+// Function removed as calc-email input no longer exists in HTML
+// Email capture now handled via direct Cal.com links
 
-    // Trigger Cal.com
-    if (window.Cal) {
-      window.Cal('open', { calLink: 'pierre-andrieux-iagence/diagnostic-15-min' });
-    }
-  };
-
-  // ===== SOLUTIONS TABS =====
-  var tabs = document.querySelectorAll('.tab-glow');
-  var panels = document.querySelectorAll('.axes-panel');
-  var indicator = document.getElementById('tabIndicator');
-
-  function updateTabIndicator() {
-    var active = document.querySelector('.tab-glow[aria-selected="true"]');
-    if (active && indicator) {
-      indicator.style.left = active.offsetLeft + 'px';
-      indicator.style.width = active.offsetWidth + 'px';
-    }
-  }
-
-  tabs.forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      var panelId = this.getAttribute('data-panel');
-
-      tabs.forEach(function(t) { t.setAttribute('aria-selected', 'false'); });
-      this.setAttribute('aria-selected', 'true');
-
-      panels.forEach(function(p) { p.classList.remove('active'); p.style.display = 'none'; });
-      var targetPanel = document.getElementById('panel-' + panelId);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
-        targetPanel.style.display = 'block';
-      }
-
-      updateTabIndicator();
-    });
-  });
-
-  // Initial indicator
-  requestAnimationFrame(updateTabIndicator);
-  window.addEventListener('resize', updateTabIndicator);
+// ===== SOLUTIONS TABS =====
+// Removed as solution tabs no longer exist in HTML
+// Solution section now uses static cards instead of tabbed panels
 
   // ===== NAV SCROLL =====
   var topNav = document.getElementById('topNav');
@@ -102,12 +62,23 @@
   // ===== MOBILE NAV =====
   window.openMobileNav = function() {
     document.getElementById('mobile-nav').classList.add('open');
+    document.getElementById('mobile-nav').setAttribute('aria-hidden', 'false');
+    document.querySelector('.hamburger').setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   };
   window.closeMobileNav = function() {
     document.getElementById('mobile-nav').classList.remove('open');
+    document.getElementById('mobile-nav').setAttribute('aria-hidden', 'true');
+    document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
+  
+  // Close mobile nav with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeMobileNav();
+    }
+  });
 
   // ===== SCROLL REVEAL =====
   var revealObserver = new IntersectionObserver(function(entries) {
@@ -127,26 +98,28 @@
   var sections = document.querySelectorAll('.full-section');
   var dots = document.querySelectorAll('.section-dot');
 
-  var sectionObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-        var index = Array.from(sections).indexOf(entry.target);
-        dots.forEach(function(d) { d.classList.remove('active'); });
-        if (dots[index]) dots[index].classList.add('active');
-      }
-    });
-  }, { threshold: 0.4 });
+  if (sections.length && dots.length) {
+    var sectionObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+          var index = Array.from(sections).indexOf(entry.target);
+          dots.forEach(function(d) { d.classList.remove('active'); });
+          if (dots[index]) dots[index].classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
 
-  sections.forEach(function(s) { sectionObserver.observe(s); });
+    sections.forEach(function(s) { sectionObserver.observe(s); });
 
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      var index = parseInt(this.getAttribute('data-section'));
-      if (sections[index]) {
-        sections[index].scrollIntoView({ behavior: 'smooth' });
-      }
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        var index = parseInt(this.getAttribute('data-section'));
+        if (sections[index]) {
+          sections[index].scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
-  });
+  }
 
   // ===== CURSOR SPOTLIGHT =====
   var spotlight = document.getElementById('cursorSpotlight');
@@ -271,35 +244,106 @@
     { x: 0.5, y: 0.6, r: 200, color: 'rgba(51,78,104,0.08)', vx: 0.0001, vy: -0.0002 }
   ]);
 
-  // ===== CAL.COM LAZY LOAD =====
-  var calLoaded = false;
-  function loadCal() {
-    if (calLoaded) return;
-    calLoaded = true;
-    var s = document.createElement('script');
-    s.src = 'https://cal.com/embed.js';
-    s.async = true;
-    s.onload = function() {
-      if (window.Cal) {
-        window.Cal('init', { origin: 'https://cal.com' });
+// ===== CAL.COM INTEGRATION =====
+var calLoaded = false;
+var calReady = false;
+
+function loadCal() {
+  if (calLoaded) return;
+  calLoaded = true;
+  var s = document.createElement('script');
+  s.src = 'https://app.cal.com/embed/embed.js';
+  s.async = true;
+  s.onload = function() {
+    if (window.Cal) {
+      window.Cal('init', 'diagnostic-15-min', { origin: 'https://app.cal.com' });
+      calReady = true;
+
+      // Inline calendar in CTA section
+      var ctaCalendar = document.querySelector('.cta-calendar');
+      if (ctaCalendar && !ctaCalendar.hasAttribute('data-initialized')) {
+        ctaCalendar.setAttribute('data-initialized', 'true');
         window.Cal('inline', {
-          elementOrSelector: '[data-cal-inline]',
+          elementOrSelector: '.cta-calendar',
           calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
           config: { layout: 'month_view' }
         });
       }
-    };
-    document.head.appendChild(s);
+
+      // Wire up all data-cal-link elements (that are NOT the floating button or inline calendar)
+      document.querySelectorAll('[data-cal-link]').forEach(function(el) {
+        if (el.classList.contains('cal-float-button') || el.classList.contains('cta-calendar') || el.hasAttribute('data-initialized')) return;
+        el.setAttribute('data-initialized', 'true');
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          var calLink = el.getAttribute('data-cal-link');
+          window.Cal('ui', 'modal', {
+            calLink: calLink,
+            config: { layout: 'week_view' }
+          });
+        });
+      });
+    }
+  };
+  document.head.appendChild(s);
+}
+
+// Floating phone button
+var calFloatBtn = document.getElementById('calFloatBtn');
+if (calFloatBtn) {
+  calFloatBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    openCalModal();
+  });
+
+  function updateFloatButtonVisibility() {
+    if (window.innerWidth > 900) {
+      var scrollPercent = (window.scrollY) / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      if (scrollPercent > 50) {
+        calFloatBtn.classList.add('visible');
+      } else {
+        calFloatBtn.classList.remove('visible');
+      }
+    } else {
+      calFloatBtn.classList.remove('visible');
+    }
   }
 
-  // Load Cal.com on first interaction or after 3s
-  var calTimeout = setTimeout(loadCal, 3000);
-  ['click', 'touchstart', 'scroll'].forEach(function(evt) {
-    document.addEventListener(evt, function handler() {
-      clearTimeout(calTimeout);
-      loadCal();
-      document.removeEventListener(evt, handler);
-    }, { once: true, passive: true });
-  });
+  window.addEventListener('scroll', updateFloatButtonVisibility, { passive: true });
+  window.addEventListener('resize', updateFloatButtonVisibility, { passive: true });
+  updateFloatButtonVisibility();
+}
+
+function openCalModal() {
+  if (!calLoaded) {
+    loadCal();
+    setTimeout(function() {
+      if (calReady && window.Cal) {
+        window.Cal('ui', 'modal', {
+          calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
+          config: { layout: 'week_view' }
+        });
+      }
+    }, 800);
+    return;
+  }
+  if (calReady && window.Cal) {
+    window.Cal('ui', 'modal', {
+      calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
+      config: { layout: 'week_view' }
+    });
+  }
+}
+
+// Load Cal.com on first interaction or after 3s
+var calTimeout = setTimeout(loadCal, 3000);
+['click', 'touchstart', 'scroll'].forEach(function(evt) {
+  document.addEventListener(evt, function handler() {
+    clearTimeout(calTimeout);
+    loadCal();
+    document.removeEventListener(evt, handler);
+  }, { once: true, passive: true });
+});
 
 })();

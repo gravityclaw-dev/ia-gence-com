@@ -3,4 +3,5 @@
 node_modules/
 *.log
 .env
-iagence-v4-source.html
+*.min.css
+*.min.js
