@@ -271,84 +271,10 @@
     { x: 0.5, y: 0.6, r: 200, color: 'rgba(51,78,104,0.08)', vx: 0.0001, vy: -0.0002 }
   ]);
 
-  // ===== CAL.COM INTEGRATION =====
-  var calLoaded = false;
-  var calReady = false;
-
-  function loadCal() {
-    if (calLoaded) return;
-    calLoaded = true;
-    var s = document.createElement('script');
-    s.src = 'https://app.cal.com/embed/embed.js';
-    s.async = true;
-    s.onload = function() {
-      if (window.Cal) {
-        window.Cal('init', 'diagnostic-15-min', { origin: 'https://app.cal.com' });
-        calReady = true;
-
-        // Inline calendar in CTA section
-        var calConfigDiv = document.querySelector('[data-cal-config]');
-        if (calConfigDiv && !calConfigDiv.hasAttribute('data-cal-wired')) {
-          calConfigDiv.setAttribute('data-cal-wired', 'true');
-          try {
-            var config = JSON.parse(calConfigDiv.getAttribute('data-cal-config'));
-            window.Cal('inline', {
-              elementOrSelector: '[data-cal-config]',
-              calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
-              config: config
-            });
-          } catch(e) {
-            console.warn('Cal config parse error', e);
-          }
-        }
-
-        // Wire up all [data-cal-link] buttons/links (not the inline calendar div)
-        document.querySelectorAll('a[data-cal-link], button[data-cal-link]').forEach(function(el) {
-          if (el.hasAttribute('data-cal-wired')) return;
-          el.setAttribute('data-cal-wired', 'true');
-          el.addEventListener('click', function(e) {
-            e.preventDefault();
-            var calLink = el.getAttribute('data-cal-link');
-            window.Cal('ui', 'modal', {
-              calLink: calLink,
-              config: { layout: 'week_view' }
-            });
-          });
-        });
-      }
-    };
-    document.head.appendChild(s);
-  }
-
-  function openCalModal() {
-    if (!calLoaded) {
-      loadCal();
-      setTimeout(function() {
-        if (calReady && window.Cal) {
-          window.Cal('ui', 'modal', {
-            calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
-            config: { layout: 'week_view' }
-          });
-        }
-      }, 1000);
-      return;
-    }
-    if (calReady && window.Cal) {
-      window.Cal('ui', 'modal', {
-        calLink: 'pierre-andrieux-iagence/diagnostic-15-min',
-        config: { layout: 'week_view' }
-      });
-    }
-  }
-
-  // Floating phone button — visible on all scroll, desktop only
+  // ===== CAL.COM FLOATING BUTTON VISIBILITY =====
+  // Note: Click handling is done natively by Cal.com via data-cal-link attributes
   var calFloatBtn = document.getElementById('calFloatBtn');
   if (calFloatBtn) {
-    calFloatBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      openCalModal();
-    });
-
     function updateFloatBtn() {
       if (window.innerWidth > 900) {
         calFloatBtn.classList.add('visible');
@@ -357,17 +283,8 @@
       }
     }
     window.addEventListener('resize', updateFloatBtn, { passive: true });
+    window.addEventListener('scroll', updateFloatBtn, { passive: true });
     updateFloatBtn();
   }
-
-  // Load Cal.com on first interaction or after 3s
-  var calTimeout = setTimeout(loadCal, 3000);
-  ['click', 'touchstart', 'scroll'].forEach(function(evt) {
-    document.addEventListener(evt, function handler() {
-      clearTimeout(calTimeout);
-      loadCal();
-      document.removeEventListener(evt, handler);
-    }, { once: true, passive: true });
-  });
 
 })();
