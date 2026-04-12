@@ -293,9 +293,10 @@
         calFloatBtn.classList.remove('visible');
       }
     }
-    window.addEventListener('resize', updateFloatBtn, { passive: true });
-    window.addEventListener('scroll', updateFloatBtn, { passive: true });
+    // Show button immediately on page load (no scroll required)
     updateFloatBtn();
+    // Update on resize to show/hide button based on viewport
+    window.addEventListener('resize', updateFloatBtn, { passive: true });
   }
 
 })();

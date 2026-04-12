@@ -411,9 +411,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-8);
-  align-items: start;
+  align-items: stretch;
 }
-.calc-input-group { margin-bottom: var(--space-8); }
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.calc-input-group { margin-bottom: 0; }
 .calc-label {
   display: block;
   font-size: 0.9rem;
@@ -1252,37 +1257,29 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: var(--orange-500);
+  background: linear-gradient(135deg, #FF5C00 0%, #FFA366 50%, #FF5C00 100%);
+  background-size: 200% auto;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(255, 92, 0, 0.35), 0 0 0 0 rgba(255, 92, 0, 0.4);
   transition: all 250ms var(--ease-out);
-  transform: scale(0);
-  opacity: 0;
-  pointer-events: none;
+  animation: cal-btn-shimmer 3s linear infinite;
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
   padding: 0;
+}
+
+@keyframes cal-btn-shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .cal-float-button.visible {
   transform: scale(1);
   opacity: 1;
   pointer-events: auto;
-}
-
-.cal-float-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(255, 92, 0, 0.5), 0 0 0 6px rgba(255, 92, 0, 0.12);
-  background: var(--orange-400);
-}
-
-.cal-float-button:active {
-  transform: scale(0.95);
-}
-
-.cal-float-button:focus-visible {
-  outline: 2px solid var(--orange-500);
-  outline-offset: 3px;
 }
 
 .cal-float-button svg {
