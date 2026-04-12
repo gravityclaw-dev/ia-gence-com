@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IAgence — Agents IA pour distributeurs industriels B2B</title>
 <meta name="description" content="Agents IA déployés sur votre machine Windows en 12 jours. Vos conseillers arrêtent de chercher des références et passent leur journée à vendre. Garantie ROI 6 mois.">
+<meta name="theme-color" content="#0F1B2D">
 <link rel="canonical" href="https://ia-gence.com/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ia-gence.com/">
 <meta property="og:title" content="IAgence — Vos conseillers cherchent au lieu de vendre. On corrige ça.">
 <meta property="og:description" content="Agents IA sur votre machine Windows. 12 jours. Zéro cloud. ROI constaté x3 chez nos clients.">
-<meta property="og:image" content="https://ia-gence.com/assets/img/og-image.jpg">
+<meta property="og:image" content="https://ia-gence.com/assets/img/og-image.webp">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
@@ -34,8 +35,8 @@ body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neut
 </style>
 
 <link rel="stylesheet" href="assets/css/design-tokens.css" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="assets/css/design-tokens.css"><link rel="stylesheet" href="assets/css/style.css"></noscript>
+<link rel="stylesheet" href="assets/css/style.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/css/design-tokens.css"><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
 
 <script type="application/ld+json">
 {
@@ -93,6 +94,7 @@ body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neut
     <a href="#garantie" class="mobile-nav-link" onclick="closeMobileNav()">Garantie</a>
     <a href="#resultats" class="mobile-nav-link" onclick="closeMobileNav()">Résultats</a>
     <a href="#methode" class="mobile-nav-link" onclick="closeMobileNav()">Méthode</a>
+    <a href="mentions-legales.html" class="mobile-nav-link" onclick="closeMobileNav()">Mentions légales</a>
   </div>
     <div class="mobile-nav-cta">
     <a data-cal-link="pierre-andrieux-iagence/diagnostic-15-min" data-cal-namespace="diagnostic-15-min" class="btn-glow" style="width:100%;display:block;text-align:center;text-decoration:none" onclick="closeMobileNav()">DIAGNOSTIC 15 MIN →</a>
@@ -116,7 +118,7 @@ body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neut
       DIAGNOSTIC 15 MIN
     </a>
   </nav>
-  <button class="hamburger" onclick="openMobileNav()" aria-label="Menu">
+  <button class="hamburger" onclick="openMobileNav()" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
     <span></span><span></span><span></span>
   </button>
 </header>
@@ -547,7 +549,7 @@ body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neut
     </div>
     <div class="temo-grid reveal reveal-delay-1">
       <div class="temo-card">
-        <img src="assets/img/logo-adca.webp" alt="ADCA" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
+        <img src="assets/img/logo-adca.webp" alt="ADCA" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left" loading="lazy">
         <span class="temo-sector">Contrôle-commande électrique · Égly (91)</span>
         <div class="temo-quote">
           "Nos équipes techniques perdaient 30% de leur semaine à fouiller les historiques fournisseurs pour chiffrer les équipements. Pierre a compris qu'on voulait une solution terrain, pas une usine à gaz. <em>On a divisé par deux notre temps de qualification sur les devis complexes. Sur des appels d'offres serrés, c'est ce qui fait la différence.</em>"
@@ -560,7 +562,7 @@ body{font-family:var(--font-body);color:var(--neutral-900);background:var(--neut
         <div class="temo-author"><strong>Damien Capai</strong> — DG délégué · ADCA · 24 salariés</div>
       </div>
       <div class="temo-card">
-        <img src="assets/img/logo-novipack.webp" alt="NOVIPACK" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left">
+        <img src="assets/img/logo-novipack.webp" alt="NOVIPACK" style="height:48px;margin-bottom:var(--space-3);object-fit:contain;object-position:left" loading="lazy">
         <span class="temo-sector">Films d'emballage & location machines · Massy (91)</span>
         <div class="temo-quote">
           "4 000 commandes par an et un parc machines en location — notre goulot n'était pas la vente, c'était l'asphyxie opérationnelle. Pierre est arrivé en chirurgien, pas en vendeur de tech. <em>On a fluidifié le SAV, réduit les erreurs de saisie, et retrouvé la réactivité qui fait notre force depuis 40 ans.</em>"
@@ -704,8 +706,6 @@ Cal("init", "diagnostic-15-min", {origin:"https://app.cal.com"});
 Cal.ns["diagnostic-15-min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 
-<script src="assets/js/main.js" defer></script>
-
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.min.js" defer></script>
 </body>
 </html>

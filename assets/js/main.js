@@ -31,10 +31,13 @@
     document.getElementById('perte-span').textContent = perteFormatted;
   }
 
-  document.getElementById('nb-slider').addEventListener('input', updateCalc);
-  document.getElementById('h-slider').addEventListener('input', updateCalc);
-  document.getElementById('taux-slider').addEventListener('input', updateCalc);
-  updateCalc();
+  var nbSlider = document.getElementById('nb-slider');
+  var hSlider = document.getElementById('h-slider');
+  var tauxSlider = document.getElementById('taux-slider');
+  if (nbSlider) nbSlider.addEventListener('input', updateCalc);
+  if (hSlider) hSlider.addEventListener('input', updateCalc);
+  if (tauxSlider) tauxSlider.addEventListener('input', updateCalc);
+  if (nbSlider || hSlider || tauxSlider) updateCalc();
 
   // ===== EMAIL CAPTURE =====
   window.submitCalcEmail = function() {
@@ -103,10 +106,18 @@
   window.openMobileNav = function() {
     document.getElementById('mobile-nav').classList.add('open');
     document.body.style.overflow = 'hidden';
+    var hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
   };
   window.closeMobileNav = function() {
     document.getElementById('mobile-nav').classList.remove('open');
     document.body.style.overflow = '';
+    var hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
   };
 
   // ===== SCROLL REVEAL =====
